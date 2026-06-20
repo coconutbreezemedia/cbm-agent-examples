@@ -179,30 +179,10 @@
 
 <div class="wrap"><div class="grid">
 
-  <!-- 1. Influencer vetting agent -->
-  <article class="case">
-    <div class="num">01</div>
-    <div class="client">Premium Wine Brand · Influencer Marketing</div>
-    <h3>An AI talent scout that thinks like the founder</h3>
-    <p class="hook"><em>We turned a winemaker's gut instinct for "which creator is actually worth a paid partnership" into a skeptical-by-default AI analyst that scores every candidate 1–5 — with reasons.</em></p>
-    <h4>The opportunity</h4>
-    <p>A premium wine brand needed to find wine and lifestyle influencers worth partnering with — fast, at volume, and without lowering the bar. The hard part wasn't finding creators; it was judgment. A creator with a huge following can convert nobody, while a quiet LTK-native can outperform everyone. That instinct lived only in the founders' heads.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>Sourcing at scale.</b> Apify scrapes Instagram and Facebook by hashtag and search term (#LTK, "wine night"), geo-filtered to the US and automatically excluding states wine can't ship to.</li>
-      <li><b>Contact discovery on a cost ladder.</b> A tiered escalation finds 4–5 emails per creator — free AI web search first, then Perplexity, then Firecrawl scraping the contact page — so cheap methods run before expensive ones.</li>
-      <li><b>An LLM rating layer that encodes founder intuition.</b> A Claude scoring agent applies a weighted rubric — link clicks, conversion rate, average order value, follower band — with hard disqualifiers and a built-in blind-spot rule for creators who look weak on paper but convert best. Every score ships with a cited rationale and a confidence level.</li>
-      <li><b>Self-routing.</b> 4–5 scores go to a human "Needs Review" queue; 2–3 auto-vet; 1s are rejected — so the team only ever looks at the strongest candidates.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> The system is skeptical by default and caps its own confidence when conversion data is missing, so it never overstates. The #1 signal is link clicks, not follower count — the same metric the founders actually care about — wired straight into an Airtable + Make pipeline.</div>
-    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Apify</span><span class="tag">Perplexity</span><span class="tag">Firecrawl</span><span class="tag">Claude (LLM scoring)</span><span class="tag">ShopMy API</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active build</span></div>
-  </article>
-
-  <!-- 2. AI sales personas -->
+  <!-- 1. AI sales personas -->
   <!-- NOTE: anonymized + softened on purpose. Do NOT publish that named live reps are AI without client sign-off. -->
   <article class="case">
-    <div class="num">02</div>
+    <div class="num">01</div>
     <div class="client">Travel Media Network · Partnership Sales</div>
     <h3>AI sales personas that run the whole outbound pipeline</h3>
     <p class="hook"><em>Two AI "partnership reps" prospect, verify, personalize, and send — each with its own voice, signature, and a set of guardrails strict enough to keep a human comfortable handing over the wheel.</em></p>
@@ -220,129 +200,9 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill live">Live in production</span></div>
   </article>
 
-  <!-- 3. Video-to-content engine -->
+  <!-- 2. Business card to CRM -->
   <article class="case">
-    <div class="num">03</div>
-    <div class="client">Travel Media Network · Content Operations</div>
-    <h3>One form turns any video into a publish-ready article and a creator script</h3>
-    <p class="hook"><em>Drop a TikTok, Reel, or YouTube link into a form and an autonomous pipeline scrapes it, transcribes it, and hands back two original pieces — written to never recycle the source.</em></p>
-    <h4>The opportunity</h4>
-    <p>A travel-media team was spending hours turning short-form video into written content. They needed a way to go from "interesting clip" to "draft an editor can ship" without a person babysitting every step — and without producing thin rewrites of the original.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A 23-node n8n pipeline</b> triggered by a single Airtable form submission, polling for new entries every minute.</li>
-      <li><b>Platform-aware ingestion.</b> It routes by source — scraping YouTube, TikTok, or Instagram via the right Apify actor — and where there's no caption track, downloads the video and transcribes it with Whisper.</li>
-      <li><b>Two specialized AI writers.</b> One drafts a 60–90 second green-screen creator script; the other writes an original 800-word article in the brand's house voice. Both are explicitly instructed to be distinctly different from the source — no recycled hooks, no clichés.</li>
-      <li><b>Self-healing and hands-off.</b> Drafts write back to Airtable and Slack-notify the assigned editor; any node failure logs the error and DMs the team automatically.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> A companion automation reads a Google Drive folder every weekday morning and generates project-management epics and stories from unstructured requirement docs — reported to take a recurring task from <strong>days down to hours</strong>.</div>
-    <div class="tags"><span class="tag">n8n</span><span class="tag">Apify</span><span class="tag">OpenAI Whisper</span><span class="tag">Claude Sonnet 4.5</span><span class="tag">Airtable</span><span class="tag">Slack</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Built &amp; validated</span></div>
-  </article>
-
-  <!-- 4. Conference Vetting Agent -->
-  <article class="case">
-    <div class="num">04</div>
-    <div class="client">Coconut Breeze Media · Conference Prep</div>
-    <h3>Text a name to a bot, get back a vetted contact in seconds</h3>
-    <p class="hook"><em>Conference due-diligence reduced to a single text message — verified email, confidence score, and a plain-language "here's who they are, here's the red flag."</em></p>
-    <h4>The opportunity</h4>
-    <p>Walking a conference floor, you collect names faster than you can research them. We wanted to compress the whole "is this person worth following up with" workflow into something you can do from your phone between conversations.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A conversational agent over Telegram.</b> Send whatever you have — a name, a company, a LinkedIn URL, an email — and the agent takes it from there.</li>
-      <li><b>Smart method selection.</b> It picks the right enrichment path based on the data available: LinkedIn URL, name + company, or email-only validation.</li>
-      <li><b>Write-back to the CRM.</b> Verified email, confidence score, and raw enrichment land in Airtable automatically, with vetting status and dates set.</li>
-      <li><b>A human-readable verdict.</b> Instead of dumping JSON, it replies in plain language — who the person is, how confident it is, and any red flags like a company mismatch or unverifiable profile.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> A reusable pattern, not a one-off — the same contact-enrichment engine drops into any sales or partnerships workflow that needs trustworthy contact data on demand.</div>
-    <div class="tags"><span class="tag">Telegram bot</span><span class="tag">Airtable</span><span class="tag">Dropcontact</span><span class="tag">Claude</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill live">Reusable pattern</span></div>
-  </article>
-
-  <!-- 5. Outbound sequencing engine -->
-  <article class="case">
-    <div class="num">05</div>
-    <div class="client">Global Test &amp; Measurement Company · Outbound Sales</div>
-    <h3>"Lead Velocity" — codifying the best rep's instincts into automated sequences</h3>
-    <p class="hook"><em>We took what the team's strongest account managers do organically — the right touch, in the right channel, on the right day — and turned it into a repeatable engine that never drops a follow-up.</em></p>
-    <h4>The opportunity</h4>
-    <p>At a global RF test-and-measurement company, the best account managers ran multi-touch outreach largely from memory. The marketing team wanted that discipline available to everyone — consistent sequencing that still felt account-manager-led, not mass-blasted.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A sequencing engine in Airtable + Make.</b> Sequences, touch templates, enrollments, and call tasks model the entire multi-touch cadence across the territory's account managers.</li>
-      <li><b>Webhook-driven advancement.</b> When an AM logs a call, a Make scenario looks up the enrollment, finds the next touch, computes the next touch date from the sequence's day-offsets, and advances — or completes — the sequence automatically.</li>
-      <li><b>Reverse-engineered from the source.</b> We mapped every field and the scheduling logic out of the existing dispatcher to build clean, importable blueprints.</li>
-      <li><b>A bug caught in the build.</b> The original logic scheduled the next touch off the <em>current</em> touch number rather than the <em>next</em> one — we found and corrected it.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> Six-touch sequences with custom day-offsets that automate a top performer's instincts <strong>without losing the human, AM-led feel</strong> buyers respond to.</div>
-    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Dux-Soup (LinkedIn)</span><span class="tag">Webhooks</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · hourly consulting</span></div>
-  </article>
-
-  <!-- 6. Governed matchmaking engine -->
-  <article class="case">
-    <div class="num">06</div>
-    <div class="client">Academic Medical Society · Matchmaking Platform</div>
-    <h3>A governed matchmaking engine for academic MedTech</h3>
-    <p class="hook"><em>Not a directory — a controlled, feedback-driven ecosystem where academic departments, MedTech companies, and key opinion leaders are matched, tracked, and held to institutional standards.</em></p>
-    <h4>The opportunity</h4>
-    <p>A national academic medical society needed a trusted way to connect university departments with MedTech and pharma companies — one that preserved institutional alignment, prevented backchanneling, and captured the engagement data from day one. As their CEO put it: if you don't capture the underlying responsiveness and matchmaking data from the beginning, you can never recreate it.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>Event-driven automation.</b> Airtable automations fire webhooks into self-hosted n8n, which builds branded payloads and sends transactional email through Brevo — the backbone for every notification in the system.</li>
-      <li><b>Multi-recipient governance.</b> Application confirmations dedupe and route to the Chair while CC'ing the Program Director and Value Analysis lead — preserving institutional alignment by design.</li>
-      <li><b>Invite-and-response tracking.</b> Departments receive opportunity invitations with one-click Interested / Not Interested / Need More Info buttons; responses are recorded and a branded confirmation page is served back.</li>
-      <li><b>Built for the long game.</b> The schema captures a full eight-stage project lifecycle and a reminder cadence (7 / 14 / 21 / 30 days) even while the launch UI exposes only what's needed today.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> Leading academic medical centers across the country onboarded ahead of a rolling launch — on a platform engineered so credibility is earned through participation, not assumed.</div>
-    <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Self-hosted n8n</span><span class="tag">Brevo</span><span class="tag">Webhooks</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Pre-launch</span></div>
-  </article>
-
-  <!-- 7. Real estate portfolio -->
-  <article class="case">
-    <div class="num">07</div>
-    <div class="client">Private Real Estate Portfolio · Operations</div>
-    <h3>A property brain that reads its own documents</h3>
-    <p class="hook"><em>Upload a lease or a mortgage and AI pulls the key dates and writes a summary — but nothing downstream moves until a human signs off.</em></p>
-    <h4>The opportunity</h4>
-    <p>A privately held real-estate portfolio was running on an aging FileMaker Pro system. Critical dates — mortgage maturities, lease expirations — lived buried in documents, and missing one is expensive. They needed a single source of truth that surfaced what mattered before it became urgent.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A relational operations model.</b> A 10-table Airtable base with Properties at the center, linked to mortgages, entities, tenants, leases, contacts, documents, and tasks.</li>
-      <li><b>AI document processing with a human gate.</b> On upload, Airtable's native AI extracts key dates and writes a short summary — then holds it in a <em>pending</em> state. No notification fires until a person reviews and approves it, and a nag email chases anything left pending.</li>
-      <li><b>An expiry engine in plain language.</b> Mortgage alerts at 18 / 12 / 6 months out, commercial-lease alerts on their own schedule, with labels like "6 months out" instead of raw color codes.</li>
-      <li><b>A recurring digest.</b> Every fourth Monday at 10am, a recap email lands for the ops team.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> The AI does the reading, the human keeps the authority — an extract-then-approve pipeline that becomes the trusted spine of the entire notification system, replacing a legacy database with no loss of control.</div>
-    <div class="tags"><span class="tag">Airtable (native AI)</span><span class="tag">Airtable Automations</span><span class="tag">Gmail</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Near handoff</span></div>
-  </article>
-
-  <!-- 8. Piper -->
-  <article class="case">
-    <div class="num">08</div>
-    <div class="client">Coconut Breeze Media · Internal Operations</div>
-    <h3>Piper — the delegation agent that builds while you sleep</h3>
-    <p class="hook"><em>Our own AI operations assistant: hand her a task and she builds the Airtable base, the Make scenario, or the document — scoped so tightly she can only ever email one person.</em></p>
-    <h4>The opportunity</h4>
-    <p>Running a busy agency means a constant stream of "someone should build this." We wanted a delegation target that could actually execute — not just take notes — while being incapable of doing anything risky like contacting a client by mistake.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A capability-scoped sub-agent.</b> Piper builds Make.com scenarios, creates Airtable bases and tables, and writes documents on command.</li>
-      <li><b>A hard guardrail.</b> She can email exactly one person — Juli — and no one else. Need outreach copy? She drafts it as a document for a human to send.</li>
-      <li><b>A strict task standard.</b> Every delegation produces a self-contained brief — deliverable, context, spec, prompt, acceptance criteria, due date — that any developer could pick up cold.</li>
-      <li><b>Smart routing.</b> Tasks route automatically by project type into the right project-management system, mirrored as both an email and a tracked task.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> It's the meta-example — the agency that builds agents runs on one internally. An assistant powerful enough to stand up databases and automations, walled off tightly enough to be trusted with the keys.</div>
-    <div class="tags"><span class="tag">Make MCP</span><span class="tag">Airtable</span><span class="tag">Claude</span><span class="tag">Task routing</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill live">Live · internal</span></div>
-  </article>
-
-  <!-- 9. Business card to CRM -->
-  <article class="case">
-    <div class="num">09</div>
+    <div class="num">02</div>
     <div class="client">Field Sales &amp; Events · Contact Capture</div>
     <h3>Snap a business card, get a clean CRM record</h3>
     <p class="hook"><em>A photo of a business card becomes an enriched, deduped contact and a queued follow-up — before you've even left the conversation.</em></p>
@@ -360,29 +220,49 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
   </article>
 
-  <!-- 10. Event Stripe booking + Brevo -->
+  <!-- 3. Influencer vetting agent -->
   <article class="case">
-    <div class="num">10</div>
-    <div class="client">Events &amp; Experiences · Bookings</div>
-    <h3>A branded booking form that takes payment and confirms itself</h3>
-    <p class="hook"><em>Guests book and pay in one flow, and a branded confirmation and reminder sequence go out automatically — no spreadsheet, no manual invoicing, no chasing.</em></p>
+    <div class="num">03</div>
+    <div class="client">Premium Wine Brand · Influencer Marketing</div>
+    <h3>An AI talent scout that thinks like the founder</h3>
+    <p class="hook"><em>We turned a winemaker's gut instinct for "which creator is actually worth a paid partnership" into a skeptical-by-default AI analyst that scores every candidate 1–5 — with reasons.</em></p>
     <h4>The opportunity</h4>
-    <p>Paid events lose money and goodwill at the seams — manual invoicing, missed confirmations, day-of no-shows. The booking, the payment, and the communications should be one connected system, not three.</p>
+    <p>A premium wine brand needed to find wine and lifestyle influencers worth partnering with — fast, at volume, and without lowering the bar. The hard part wasn't finding creators; it was judgment. A creator with a huge following can convert nobody, while a quiet LTK-native can outperform everyone. That instinct lived only in the founders' heads.</p>
     <h4>What we built</h4>
     <ul>
-      <li><b>A branded booking form wired to Stripe</b> for instant, secure payment at the point of registration.</li>
-      <li><b>One source of truth.</b> Every booking writes to a single events database — capacity, attendee details, and payment status in one place.</li>
-      <li><b>Branded email through Brevo.</b> A confirmation on purchase, reminders before the event, and a follow-up after — all in the client's brand, not a generic receipt.</li>
-      <li><b>Self-managing capacity.</b> Sold-out events trigger waitlist logic automatically.</li>
+      <li><b>Sourcing at scale.</b> Apify scrapes Instagram and Facebook by hashtag and search term (#LTK, "wine night"), geo-filtered to the US and automatically excluding states wine can't ship to.</li>
+      <li><b>Contact discovery on a cost ladder.</b> A tiered escalation finds 4–5 emails per creator — free AI web search first, then Perplexity, then Firecrawl scraping the contact page — so cheap methods run before expensive ones.</li>
+      <li><b>An LLM rating layer that encodes founder intuition.</b> A Claude scoring agent applies a weighted rubric — link clicks, conversion rate, average order value, follower band — with hard disqualifiers and a built-in blind-spot rule for creators who look weak on paper but convert best. Every score ships with a cited rationale and a confidence level.</li>
+      <li><b>Self-routing.</b> 4–5 scores go to a human "Needs Review" queue; 2–3 auto-vet; 1s are rejected — so the team only ever looks at the strongest candidates.</li>
     </ul>
-    <div class="result"><strong>The edge —</strong> Registration, payment, and a polished branded inbox experience in one automated flow — the operations layer behind a real event portal, not a generic form builder.</div>
-    <div class="tags"><span class="tag">Stripe</span><span class="tag">Brevo</span><span class="tag">Airtable / Softr</span><span class="tag">Webhooks</span><span class="tag">Branded email</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+    <div class="result"><strong>The edge —</strong> The system is skeptical by default and caps its own confidence when conversion data is missing, so it never overstates. The #1 signal is link clicks, not follower count — the same metric the founders actually care about — wired straight into an Airtable + Make pipeline.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Apify</span><span class="tag">Perplexity</span><span class="tag">Firecrawl</span><span class="tag">Claude (LLM scoring)</span><span class="tag">ShopMy API</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active build</span></div>
   </article>
 
-  <!-- 11. Applicant vetting -->
+  <!-- 4. Video-to-content engine -->
   <article class="case">
-    <div class="num">11</div>
+    <div class="num">04</div>
+    <div class="client">Travel Media Network · Content Operations</div>
+    <h3>One form turns any video into a publish-ready article and a creator script</h3>
+    <p class="hook"><em>Drop a TikTok, Reel, or YouTube link into a form and an autonomous pipeline scrapes it, transcribes it, and hands back two original pieces — written to never recycle the source.</em></p>
+    <h4>The opportunity</h4>
+    <p>A travel-media team was spending hours turning short-form video into written content. They needed a way to go from "interesting clip" to "draft an editor can ship" without a person babysitting every step — and without producing thin rewrites of the original.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A 23-node n8n pipeline</b> triggered by a single Airtable form submission, polling for new entries every minute.</li>
+      <li><b>Platform-aware ingestion.</b> It routes by source — scraping YouTube, TikTok, or Instagram via the right Apify actor — and where there's no caption track, downloads the video and transcribes it with Whisper.</li>
+      <li><b>Two specialized AI writers.</b> One drafts a 60–90 second green-screen creator script; the other writes an original 800-word article in the brand's house voice. Both are explicitly instructed to be distinctly different from the source — no recycled hooks, no clichés.</li>
+      <li><b>Self-healing and hands-off.</b> Drafts write back to Airtable and Slack-notify the assigned editor; any node failure logs the error and DMs the team automatically.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A companion automation reads a Google Drive folder every weekday morning and generates project-management epics and stories from unstructured requirement docs — reported to take a recurring task from <strong>days down to hours</strong>.</div>
+    <div class="tags"><span class="tag">n8n</span><span class="tag">Apify</span><span class="tag">OpenAI Whisper</span><span class="tag">Claude Sonnet 4.5</span><span class="tag">Airtable</span><span class="tag">Slack</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Built &amp; validated</span></div>
+  </article>
+
+  <!-- 5. Applicant vetting -->
+  <article class="case">
+    <div class="num">05</div>
     <div class="client">Hiring &amp; Recruiting · Applicant Screening</div>
     <h3>Applicants screened automatically — with the receipts</h3>
     <p class="hook"><em>Every applicant is researched across the open web, scored against your criteria, and approved or denied automatically — each decision backed by links to exactly what was found.</em></p>
@@ -400,9 +280,9 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
   </article>
 
-  <!-- 12. Trend tracking -->
+  <!-- 6. Trend tracking -->
   <article class="case">
-    <div class="num">12</div>
+    <div class="num">06</div>
     <div class="client">Content &amp; Marketing · Trend Intelligence</div>
     <h3>An RSS firehose that ranks the trends that matter</h3>
     <p class="hook"><em>Point it at the feeds you care about and it reads everything, ranks the top trends and stories every day, and hands your team a briefing instead of a backlog.</em></p>
@@ -418,6 +298,126 @@
     <div class="result"><strong>The edge —</strong> Your team starts the day with the ten things worth knowing, ranked — instead of fifty open tabs.</div>
     <div class="tags"><span class="tag">RSS</span><span class="tag">Claude (ranking)</span><span class="tag">n8n / Make</span><span class="tag">Slack / Email digest</span></div>
     <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 7. Community insights to social calendar -->
+  <article class="case">
+    <div class="num">07</div>
+    <div class="client">Membership Community · Social Intelligence</div>
+    <h3>Turn what your community is talking about into next week's content</h3>
+    <p class="hook"><em>The agent reads what your groups are actually posting, surfaces the themes gaining heat, and turns them into a ready-to-go social calendar.</em></p>
+    <h4>The opportunity</h4>
+    <p>The best content ideas are already inside your community's conversations — but nobody has time to read every group and translate the patterns into a posting plan.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Conversation listening.</b> It reads what's being posted across community groups and channels.</li>
+      <li><b>Theme detection.</b> Recurring questions, hot topics, and emerging language get clustered into content-ready themes.</li>
+      <li><b>Calendar generation.</b> Each theme becomes scheduled social posts mapped across the week, in your brand voice.</li>
+      <li><b>A feedback loop.</b> What resonates feeds back in, so the calendar sharpens with every cycle.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Your social calendar stops being a guessing game — it becomes a direct readout of what your own community cares about right now.</div>
+    <div class="tags"><span class="tag">Community data</span><span class="tag">Claude (analysis)</span><span class="tag">Content calendar</span><span class="tag">Social scheduling</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 8. Conference Vetting Agent -->
+  <article class="case">
+    <div class="num">08</div>
+    <div class="client">Coconut Breeze Media · Conference Prep</div>
+    <h3>Text a name to a bot, get back a vetted contact in seconds</h3>
+    <p class="hook"><em>Conference due-diligence reduced to a single text message — verified email, confidence score, and a plain-language "here's who they are, here's the red flag."</em></p>
+    <h4>The opportunity</h4>
+    <p>Walking a conference floor, you collect names faster than you can research them. We wanted to compress the whole "is this person worth following up with" workflow into something you can do from your phone between conversations.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A conversational agent over Telegram.</b> Send whatever you have — a name, a company, a LinkedIn URL, an email — and the agent takes it from there.</li>
+      <li><b>Smart method selection.</b> It picks the right enrichment path based on the data available: LinkedIn URL, name + company, or email-only validation.</li>
+      <li><b>Write-back to the CRM.</b> Verified email, confidence score, and raw enrichment land in Airtable automatically, with vetting status and dates set.</li>
+      <li><b>A human-readable verdict.</b> Instead of dumping JSON, it replies in plain language — who the person is, how confident it is, and any red flags like a company mismatch or unverifiable profile.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A reusable pattern, not a one-off — the same contact-enrichment engine drops into any sales or partnerships workflow that needs trustworthy contact data on demand.</div>
+    <div class="tags"><span class="tag">Telegram bot</span><span class="tag">Airtable</span><span class="tag">Dropcontact</span><span class="tag">Claude</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Reusable pattern</span></div>
+  </article>
+
+  <!-- 9. Governed matchmaking engine -->
+  <article class="case">
+    <div class="num">09</div>
+    <div class="client">Academic Medical Society · Matchmaking Platform</div>
+    <h3>A governed matchmaking engine for academic MedTech</h3>
+    <p class="hook"><em>Not a directory — a controlled, feedback-driven ecosystem where academic departments, MedTech companies, and key opinion leaders are matched, tracked, and held to institutional standards.</em></p>
+    <h4>The opportunity</h4>
+    <p>A national academic medical society needed a trusted way to connect university departments with MedTech and pharma companies — one that preserved institutional alignment, prevented backchanneling, and captured the engagement data from day one. As their CEO put it: if you don't capture the underlying responsiveness and matchmaking data from the beginning, you can never recreate it.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Event-driven automation.</b> Airtable automations fire webhooks into self-hosted n8n, which builds branded payloads and sends transactional email through Brevo — the backbone for every notification in the system.</li>
+      <li><b>Multi-recipient governance.</b> Application confirmations dedupe and route to the Chair while CC'ing the Program Director and Value Analysis lead — preserving institutional alignment by design.</li>
+      <li><b>Invite-and-response tracking.</b> Departments receive opportunity invitations with one-click Interested / Not Interested / Need More Info buttons; responses are recorded and a branded confirmation page is served back.</li>
+      <li><b>Built for the long game.</b> The schema captures a full eight-stage project lifecycle and a reminder cadence (7 / 14 / 21 / 30 days) even while the launch UI exposes only what's needed today.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Leading academic medical centers across the country onboarded ahead of a rolling launch — on a platform engineered so credibility is earned through participation, not assumed.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Self-hosted n8n</span><span class="tag">Brevo</span><span class="tag">Webhooks</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Pre-launch</span></div>
+  </article>
+
+  <!-- 10. Outbound sequencing engine -->
+  <article class="case">
+    <div class="num">10</div>
+    <div class="client">Global Test &amp; Measurement Company · Outbound Sales</div>
+    <h3>"Lead Velocity" — codifying the best rep's instincts into automated sequences</h3>
+    <p class="hook"><em>We took what the team's strongest account managers do organically — the right touch, in the right channel, on the right day — and turned it into a repeatable engine that never drops a follow-up.</em></p>
+    <h4>The opportunity</h4>
+    <p>At a global RF test-and-measurement company, the best account managers ran multi-touch outreach largely from memory. The marketing team wanted that discipline available to everyone — consistent sequencing that still felt account-manager-led, not mass-blasted.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A sequencing engine in Airtable + Make.</b> Sequences, touch templates, enrollments, and call tasks model the entire multi-touch cadence across the territory's account managers.</li>
+      <li><b>Webhook-driven advancement.</b> When an AM logs a call, a Make scenario looks up the enrollment, finds the next touch, computes the next touch date from the sequence's day-offsets, and advances — or completes — the sequence automatically.</li>
+      <li><b>Reverse-engineered from the source.</b> We mapped every field and the scheduling logic out of the existing dispatcher to build clean, importable blueprints.</li>
+      <li><b>A bug caught in the build.</b> The original logic scheduled the next touch off the <em>current</em> touch number rather than the <em>next</em> one — we found and corrected it.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Six-touch sequences with custom day-offsets that automate a top performer's instincts <strong>without losing the human, AM-led feel</strong> buyers respond to.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Dux-Soup (LinkedIn)</span><span class="tag">Webhooks</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · hourly consulting</span></div>
+  </article>
+
+  <!-- 11. Event Stripe booking + Brevo -->
+  <article class="case">
+    <div class="num">11</div>
+    <div class="client">Events &amp; Experiences · Bookings</div>
+    <h3>A branded booking form that takes payment and confirms itself</h3>
+    <p class="hook"><em>Guests book and pay in one flow, and a branded confirmation and reminder sequence go out automatically — no spreadsheet, no manual invoicing, no chasing.</em></p>
+    <h4>The opportunity</h4>
+    <p>Paid events lose money and goodwill at the seams — manual invoicing, missed confirmations, day-of no-shows. The booking, the payment, and the communications should be one connected system, not three.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A branded booking form wired to Stripe</b> for instant, secure payment at the point of registration.</li>
+      <li><b>One source of truth.</b> Every booking writes to a single events database — capacity, attendee details, and payment status in one place.</li>
+      <li><b>Branded email through Brevo.</b> A confirmation on purchase, reminders before the event, and a follow-up after — all in the client's brand, not a generic receipt.</li>
+      <li><b>Self-managing capacity.</b> Sold-out events trigger waitlist logic automatically.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Registration, payment, and a polished branded inbox experience in one automated flow — the operations layer behind a real event portal, not a generic form builder.</div>
+    <div class="tags"><span class="tag">Stripe</span><span class="tag">Brevo</span><span class="tag">Airtable / Softr</span><span class="tag">Webhooks</span><span class="tag">Branded email</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 12. Real estate portfolio -->
+  <article class="case">
+    <div class="num">12</div>
+    <div class="client">Private Real Estate Portfolio · Operations</div>
+    <h3>A property brain that reads its own documents</h3>
+    <p class="hook"><em>Upload a lease or a mortgage and AI pulls the key dates and writes a summary — but nothing downstream moves until a human signs off.</em></p>
+    <h4>The opportunity</h4>
+    <p>A privately held real-estate portfolio was running on an aging FileMaker Pro system. Critical dates — mortgage maturities, lease expirations — lived buried in documents, and missing one is expensive. They needed a single source of truth that surfaced what mattered before it became urgent.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A relational operations model.</b> A 10-table Airtable base with Properties at the center, linked to mortgages, entities, tenants, leases, contacts, documents, and tasks.</li>
+      <li><b>AI document processing with a human gate.</b> On upload, Airtable's native AI extracts key dates and writes a short summary — then holds it in a <em>pending</em> state. No notification fires until a person reviews and approves it, and a nag email chases anything left pending.</li>
+      <li><b>An expiry engine in plain language.</b> Mortgage alerts at 18 / 12 / 6 months out, commercial-lease alerts on their own schedule, with labels like "6 months out" instead of raw color codes.</li>
+      <li><b>A recurring digest.</b> Every fourth Monday at 10am, a recap email lands for the ops team.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> The AI does the reading, the human keeps the authority — an extract-then-approve pipeline that becomes the trusted spine of the entire notification system, replacing a legacy database with no loss of control.</div>
+    <div class="tags"><span class="tag">Airtable (native AI)</span><span class="tag">Airtable Automations</span><span class="tag">Gmail</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Near handoff</span></div>
   </article>
 
   <!-- 13. Smart team scheduling -->
@@ -440,24 +440,24 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
   </article>
 
-  <!-- 14. Community insights to social calendar -->
+  <!-- 14. Piper -->
   <article class="case">
     <div class="num">14</div>
-    <div class="client">Membership Community · Social Intelligence</div>
-    <h3>Turn what your community is talking about into next week's content</h3>
-    <p class="hook"><em>The agent reads what your groups are actually posting, surfaces the themes gaining heat, and turns them into a ready-to-go social calendar.</em></p>
+    <div class="client">Coconut Breeze Media · Internal Operations</div>
+    <h3>Piper — the delegation agent that builds while you sleep</h3>
+    <p class="hook"><em>Our own AI operations assistant: hand her a task and she builds the Airtable base, the Make scenario, or the document — scoped so tightly she can only ever email one person.</em></p>
     <h4>The opportunity</h4>
-    <p>The best content ideas are already inside your community's conversations — but nobody has time to read every group and translate the patterns into a posting plan.</p>
+    <p>Running a busy agency means a constant stream of "someone should build this." We wanted a delegation target that could actually execute — not just take notes — while being incapable of doing anything risky like contacting a client by mistake.</p>
     <h4>What we built</h4>
     <ul>
-      <li><b>Conversation listening.</b> It reads what's being posted across community groups and channels.</li>
-      <li><b>Theme detection.</b> Recurring questions, hot topics, and emerging language get clustered into content-ready themes.</li>
-      <li><b>Calendar generation.</b> Each theme becomes scheduled social posts mapped across the week, in your brand voice.</li>
-      <li><b>A feedback loop.</b> What resonates feeds back in, so the calendar sharpens with every cycle.</li>
+      <li><b>A capability-scoped sub-agent.</b> Piper builds Make.com scenarios, creates Airtable bases and tables, and writes documents on command.</li>
+      <li><b>A hard guardrail.</b> She can email exactly one person — Juli — and no one else. Need outreach copy? She drafts it as a document for a human to send.</li>
+      <li><b>A strict task standard.</b> Every delegation produces a self-contained brief — deliverable, context, spec, prompt, acceptance criteria, due date — that any developer could pick up cold.</li>
+      <li><b>Smart routing.</b> Tasks route automatically by project type into the right project-management system, mirrored as both an email and a tracked task.</li>
     </ul>
-    <div class="result"><strong>The edge —</strong> Your social calendar stops being a guessing game — it becomes a direct readout of what your own community cares about right now.</div>
-    <div class="tags"><span class="tag">Community data</span><span class="tag">Claude (analysis)</span><span class="tag">Content calendar</span><span class="tag">Social scheduling</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+    <div class="result"><strong>The edge —</strong> It's the meta-example — the agency that builds agents runs on one internally. An assistant powerful enough to stand up databases and automations, walled off tightly enough to be trusted with the keys.</div>
+    <div class="tags"><span class="tag">Make MCP</span><span class="tag">Airtable</span><span class="tag">Claude</span><span class="tag">Task routing</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Live · internal</span></div>
   </article>
 
 </div></div>
