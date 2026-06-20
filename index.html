@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agents & Automations | Coconut Breeze Media</title>
+<meta name="description" content="A showcase of the AI agents, automation systems, and custom platforms Coconut Breeze Media has built for clients across travel, healthcare, real estate, and more." />
+<meta property="og:title" content="Agents & Automations | Coconut Breeze Media" />
+<meta property="og:description" content="The AI agents and automation systems CBM builds — vetting agents, sales personas, content pipelines, and operations platforms." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cream:#FAF3E0;
+    --cream-2:#F4EAD3;
+    --brown:#87694A;
+    --brown-deep:#603B18;
+    --teal:#2E6E6A;
+    --teal-soft:#3E847F;
+    --ink:#3A2A17;
+    --card:#FFFDF7;
+    --line:rgba(96,59,24,.16);
+    --shadow:0 18px 50px -24px rgba(96,59,24,.45);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--brown-deep);
+    font-family:'Raleway',Arial,Helvetica,sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Montserrat',sans-serif;color:var(--brown-deep);margin:0;line-height:1.12}
+  a{color:var(--brown-deep);text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,243,224,.86);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Montserrat';font-weight:800;letter-spacing:.5px;font-size:15px;text-transform:uppercase}
+  .brand .mark{width:34px;height:34px;border-radius:50%;background:
+     radial-gradient(circle at 35% 30%, var(--teal-soft), var(--teal) 55%, var(--brown-deep) 100%);
+     box-shadow:inset 0 0 0 3px var(--cream), 0 2px 8px rgba(96,59,24,.35)}
+  .nav .cta{
+    background:var(--brown-deep);color:var(--cream);
+    padding:11px 22px;border-radius:15px;font-weight:700;font-size:14px;
+    font-family:'Montserrat';transition:transform .15s ease, background .2s ease}
+  .nav .cta:hover{background:var(--teal);transform:translateY(-1px)}
+
+  /* Hero */
+  .hero{padding:88px 0 56px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(60% 80% at 88% -10%, rgba(46,110,106,.14), transparent 60%),
+      radial-gradient(50% 70% at 0% 110%, rgba(135,105,74,.16), transparent 60%);
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{display:inline-block;font-family:'Montserrat';font-weight:700;letter-spacing:2.5px;
+    text-transform:uppercase;font-size:12.5px;color:var(--teal);
+    background:rgba(46,110,106,.10);border:1px solid rgba(46,110,106,.25);
+    padding:7px 16px;border-radius:200px;margin-bottom:24px}
+  .hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;letter-spacing:-1px;max-width:16ch}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero .lede{font-size:clamp(19px,2.4vw,23px);max-width:62ch;margin-top:24px;color:var(--ink)}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 22px;box-shadow:var(--shadow)}
+  .stat b{font-family:'Montserrat';font-size:26px;display:block;color:var(--brown-deep)}
+  .stat span{font-size:13.5px;letter-spacing:.4px;color:var(--brown);text-transform:uppercase;font-weight:600}
+
+  /* Section intro */
+  .band{padding:54px 0 12px}
+  .band h2{font-size:clamp(26px,3.4vw,34px);font-weight:800;letter-spacing:-.5px}
+  .band .kicker{font-family:'Montserrat';font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--brown);font-size:12.5px;margin-bottom:10px}
+  .band p{max-width:64ch;color:var(--ink);margin-top:10px}
+
+  /* Cards */
+  .grid{display:grid;gap:26px;padding:18px 0 10px}
+  .case{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:38px 40px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .case::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+    background:linear-gradient(var(--teal),var(--brown))}
+  .case .num{font-family:'Montserrat';font-weight:800;font-size:13px;color:var(--teal);
+    letter-spacing:1.5px}
+  .case .client{font-family:'Montserrat';font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    font-size:12.5px;color:var(--brown);margin:6px 0 12px}
+  .case h3{font-size:clamp(23px,2.8vw,30px);font-weight:800;letter-spacing:-.4px;max-width:24ch}
+  .case .hook{font-style:italic;font-size:18.5px;color:var(--teal-soft);margin:16px 0 24px;max-width:70ch;
+    border-left:none}
+  .case h4{font-family:'Montserrat';font-weight:700;font-size:13.5px;letter-spacing:1.2px;
+    text-transform:uppercase;color:var(--brown-deep);margin:26px 0 12px;
+    display:flex;align-items:center;gap:10px}
+  .case h4::before{content:"";width:18px;height:2px;background:var(--teal);display:inline-block}
+  .case p{margin:0 0 14px;color:var(--ink)}
+  .case ul{margin:0;padding:0;list-style:none}
+  .case ul li{position:relative;padding:8px 0 8px 26px;color:var(--ink);border-bottom:1px dashed var(--line)}
+  .case ul li:last-child{border-bottom:none}
+  .case ul li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-radius:2px;
+    background:var(--teal);transform:rotate(45deg)}
+  .case ul li b{color:var(--brown-deep)}
+  .result{margin-top:24px;background:linear-gradient(180deg,rgba(46,110,106,.07),rgba(135,105,74,.07));
+    border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px}
+  .result strong{font-family:'Montserrat';color:var(--brown-deep)}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+  .tag{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--brown-deep);
+    background:rgba(135,105,74,.12);border:1px solid var(--line);padding:5px 12px;border-radius:200px}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}
+  .pill{font-family:'Montserrat';font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+    padding:5px 12px;border-radius:200px}
+  .pill.live{background:rgba(46,110,106,.14);color:var(--teal);border:1px solid rgba(46,110,106,.3)}
+  .pill.build{background:rgba(135,105,74,.16);color:var(--brown);border:1px solid var(--line)}
+
+  /* CTA */
+  .cta-band{margin:72px 0 0;background:var(--brown-deep);color:var(--cream);
+    border-radius:24px;padding:56px 44px;text-align:center;box-shadow:var(--shadow)}
+  .cta-band h2{color:var(--cream);font-size:clamp(28px,3.6vw,38px);font-weight:800;max-width:20ch;margin:0 auto}
+  .cta-band p{color:rgba(250,243,224,.82);max-width:56ch;margin:18px auto 30px;font-size:19px}
+  .cta-band a{background:var(--teal);color:var(--cream);font-family:'Montserrat';font-weight:700;
+    padding:15px 34px;border-radius:15px;display:inline-block;transition:transform .15s ease,background .2s ease}
+  .cta-band a:hover{background:var(--cream);color:var(--brown-deep);transform:translateY(-2px)}
+
+  footer.site{padding:40px 0 64px;text-align:center;color:var(--brown);font-size:14px}
+  footer.site .brand{justify-content:center;margin-bottom:14px;color:var(--brown-deep)}
+
+  @media(max-width:640px){
+    body{font-size:17px}
+    .case{padding:28px 22px}
+    .hero{padding:60px 0 40px}
+    .cta-band{padding:40px 24px}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="https://www.coconutbreezemedia.com"><span class="mark"></span>Coconut Breeze Media</a>
+    <a class="cta" href="https://www.coconutbreezemedia.com/contact">Let's Talk</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Agents &amp; Automations</span>
+    <h1>We build the <em>agents</em> that run the work behind the work.</h1>
+    <p class="lede">Coconut Breeze Media designs custom AI agents, automation systems, and operational platforms that quietly carry the load — vetting contacts, sequencing outreach, turning video into content, reading documents, and replacing the legacy tools teams have outgrown. Here are some of the systems we've shipped.</p>
+    <div class="meta">
+      <div class="stat"><b>12</b><span>Systems shipped</span></div>
+      <div class="stat"><b>8+</b><span>Industries served</span></div>
+      <div class="stat"><b>250+</b><span>Users on a single build</span></div>
+      <div class="stat"><b>4 → 1</b><span>Tools consolidated</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== AGENTS & AUTOMATIONS =========================== -->
+<div class="band">
+  <div class="wrap">
+    <div class="kicker">Agents &amp; Automations</div>
+    <h2>Systems that think, decide, and act</h2>
+    <p>These are the agentic builds — automations with judgment baked in. They score, sequence, summarize, and route on their own, with humans kept exactly where they add the most value.</p>
+  </div>
+</div>
+
+<div class="wrap"><div class="grid">
+
+  <!-- 1. Sophie James -->
+  <article class="case">
+    <div class="num">01</div>
+    <div class="client">Sophie James Wine · Influencer Marketing</div>
+    <h3>An AI talent scout that thinks like the founder</h3>
+    <p class="hook"><em>We turned a winemaker's gut instinct for "which creator is actually worth a paid partnership" into a skeptical-by-default AI analyst that scores every candidate 1–5 — with reasons.</em></p>
+    <h4>The opportunity</h4>
+    <p>Sophie James Wine needed to find wine and lifestyle influencers worth partnering with — fast, at volume, and without lowering the bar. The hard part wasn't finding creators; it was judgment. A creator with a huge following can convert nobody, while a quiet LTK-native can outperform everyone. That instinct lived only in the founders' heads.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Sourcing at scale.</b> Apify scrapes Instagram and Facebook by hashtag and search term (#LTK, "wine night"), geo-filtered to the US and automatically excluding states wine can't ship to.</li>
+      <li><b>Contact discovery on a cost ladder.</b> A tiered escalation finds 4–5 emails per creator — free AI web search first, then Perplexity, then Firecrawl scraping the contact page — so cheap methods run before expensive ones.</li>
+      <li><b>An LLM rating layer that encodes founder intuition.</b> A Claude scoring agent applies a weighted rubric — link clicks, conversion rate, average order value, follower band — with hard disqualifiers and a built-in blind-spot rule for creators who look weak on paper but convert best. Every score ships with a cited rationale and a confidence level.</li>
+      <li><b>Self-routing.</b> 4–5 scores go to a human "Needs Review" queue; 2–3 auto-vet; 1s are rejected — so the team only ever looks at the strongest candidates.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> The system is skeptical by default and caps its own confidence when conversion data is missing, so it never overstates. The #1 signal is link clicks, not follower count — the same metric the founders actually care about — wired straight into an Airtable + Make pipeline.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Apify</span><span class="tag">Perplexity</span><span class="tag">Firecrawl</span><span class="tag">Claude (LLM scoring)</span><span class="tag">ShopMy API</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active build</span></div>
+  </article>
+
+  <!-- 2. Matador Sales Agent -->
+  <!-- ⚠️ CONFIDENTIALITY: softened on purpose. Do NOT publish that named live reps are AI. Get Greg's OK first. -->
+  <article class="case">
+    <div class="num">02</div>
+    <div class="client">Travel Media Network · Partnership Sales</div>
+    <h3>AI sales personas that run the whole outbound pipeline</h3>
+    <p class="hook"><em>Two AI "partnership reps" prospect, verify, personalize, and send — each with its own voice, signature, and a set of guardrails strict enough to keep a human comfortable handing over the wheel.</em></p>
+    <h4>The opportunity</h4>
+    <p>A travel-media partnerships team wanted the reach of a full outbound operation without the manual grind of research, list-cleaning, and one-off drafting. The goal: a system that could carry a real pipeline end to end while never sounding like a robot and never doing anything off-brand.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A full pipeline as slash commands.</b> Find contacts (parallel research sub-agents by region and vertical) → vet (dedupe against the CRM, verify emails) → draft personalized outreach in a chosen persona → human approval → send. Every action is logged per contact.</li>
+      <li><b>Two distinct personas.</b> Each has its own email, signature, knowledge base, and CC rules — so outreach stays consistent and on-message across the whole team.</li>
+      <li><b>Guardrails that earn trust.</b> A hard per-address daily send cap, no sending during overnight hours (it would look automated), auto-send only on "safe" categories, and automatic escalation the moment anything touches money, contracts, or RFPs.</li>
+      <li><b>Migrated to be portable.</b> Rebuilt from a bespoke Mac-mini orchestration onto Claude Code — skills, slash commands, and a portable memory system — then re-architected toward a per-rep copilot each salesperson can run with their own email and CRM.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Live in production and operated day-to-day, with the team's weekly capacity raised from a cautious pilot to full-scale use. The system enforces its own good behavior — down to refusing to suggest meeting times because a human owns the calendar.</div>
+    <div class="tags"><span class="tag">Claude Code (sub-agents)</span><span class="tag">Airtable CRM</span><span class="tag">HubSpot</span><span class="tag">Dropcontact</span><span class="tag">Email automation</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Live in production</span></div>
+  </article>
+
+  <!-- 3. Matador Content Engine -->
+  <article class="case">
+    <div class="num">03</div>
+    <div class="client">Matador Network · Content Operations</div>
+    <h3>One form turns any video into a publish-ready article and a creator script</h3>
+    <p class="hook"><em>Drop a TikTok, Reel, or YouTube link into a form and an autonomous pipeline scrapes it, transcribes it, and hands back two original pieces — written to never recycle the source.</em></p>
+    <h4>The opportunity</h4>
+    <p>Matador Network's team was spending hours turning short-form video into written content. They needed a way to go from "interesting clip" to "draft an editor can ship" without a person babysitting every step — and without producing thin rewrites of the original.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A 23-node n8n pipeline</b> triggered by a single Airtable form submission, polling for new entries every minute.</li>
+      <li><b>Platform-aware ingestion.</b> It routes by source — scraping YouTube, TikTok, or Instagram via the right Apify actor — and where there's no caption track, downloads the video and transcribes it with Whisper.</li>
+      <li><b>Two specialized AI writers.</b> One drafts a 60–90 second green-screen creator script; the other writes an original 800-word article in Matador's voice. Both are explicitly instructed to be distinctly different from the source — no recycled hooks, no clichés.</li>
+      <li><b>Self-healing and hands-off.</b> Drafts write back to Airtable and Slack-notify the assigned editor; any node failure logs the error and DMs the team automatically.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A companion automation reads a Google Drive folder every weekday morning and generates project-management epics and stories from unstructured requirement docs — reported to take a recurring task from <strong>days down to hours</strong>.</div>
+    <div class="tags"><span class="tag">n8n</span><span class="tag">Apify</span><span class="tag">OpenAI Whisper</span><span class="tag">Claude Sonnet 4.5</span><span class="tag">Airtable</span><span class="tag">Slack</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Built &amp; validated</span></div>
+  </article>
+
+  <!-- 4. Conference Vetting Agent -->
+  <article class="case">
+    <div class="num">04</div>
+    <div class="client">Coconut Breeze Media · Conference Prep</div>
+    <h3>Text a name to a bot, get back a vetted contact in seconds</h3>
+    <p class="hook"><em>Conference due-diligence reduced to a single text message — verified email, confidence score, and a plain-language "here's who they are, here's the red flag."</em></p>
+    <h4>The opportunity</h4>
+    <p>Walking a conference floor, you collect names faster than you can research them. We wanted to compress the whole "is this person worth following up with" workflow into something you can do from your phone between conversations.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A conversational agent over Telegram.</b> Send whatever you have — a name, a company, a LinkedIn URL, an email — and the agent takes it from there.</li>
+      <li><b>Smart method selection.</b> It picks the right enrichment path based on the data available: LinkedIn URL, name + company, or email-only validation.</li>
+      <li><b>Write-back to the CRM.</b> Verified email, confidence score, and raw enrichment land in Airtable automatically, with vetting status and dates set.</li>
+      <li><b>A human-readable verdict.</b> Instead of dumping JSON, it replies in plain language — who the person is, how confident it is, and any red flags like a company mismatch or unverifiable profile.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A reusable pattern, not a one-off — the same contact-enrichment engine drops into any sales or partnerships workflow that needs trustworthy contact data on demand.</div>
+    <div class="tags"><span class="tag">Telegram bot</span><span class="tag">Airtable</span><span class="tag">Dropcontact</span><span class="tag">Claude</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Reusable pattern</span></div>
+  </article>
+
+  <!-- 5. Rohde & Schwarz Lead Velocity -->
+  <article class="case">
+    <div class="num">05</div>
+    <div class="client">Rohde &amp; Schwarz · Outbound Sales</div>
+    <h3>"Lead Velocity" — codifying the best rep's instincts into automated sequences</h3>
+    <p class="hook"><em>We took what the team's strongest account managers do organically — the right touch, in the right channel, on the right day — and turned it into a repeatable engine that never drops a follow-up.</em></p>
+    <h4>The opportunity</h4>
+    <p>At a global RF test-and-measurement company, the best account managers ran multi-touch outreach largely from memory. The marketing team wanted that discipline available to everyone — consistent sequencing that still felt account-manager-led, not mass-blasted.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A sequencing engine in Airtable + Make.</b> Sequences, touch templates, enrollments, and call tasks model the entire multi-touch cadence across the territory's account managers.</li>
+      <li><b>Webhook-driven advancement.</b> When an AM logs a call, a Make scenario looks up the enrollment, finds the next touch, computes the next touch date from the sequence's day-offsets, and advances — or completes — the sequence automatically.</li>
+      <li><b>Reverse-engineered from the source.</b> We mapped every field and the scheduling logic out of the existing dispatcher to build clean, importable blueprints.</li>
+      <li><b>A bug caught in the build.</b> The original logic scheduled the next touch off the <em>current</em> touch number rather than the <em>next</em> one — we found and corrected it.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Six-touch sequences with custom day-offsets that automate a top performer's instincts <strong>without losing the human, AM-led feel</strong> buyers respond to.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Make.com</span><span class="tag">Dux-Soup (LinkedIn)</span><span class="tag">Webhooks</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · hourly consulting</span></div>
+  </article>
+
+  <!-- 6. POST -->
+  <article class="case">
+    <div class="num">06</div>
+    <div class="client">AOC · POST (postmedtech.com)</div>
+    <h3>A governed matchmaking engine for academic MedTech</h3>
+    <p class="hook"><em>Not a directory — a controlled, feedback-driven ecosystem where academic departments, MedTech companies, and key opinion leaders are matched, tracked, and held to institutional standards.</em></p>
+    <h4>The opportunity</h4>
+    <p>AOC needed a trusted way to connect university orthopaedic departments with MedTech and pharma companies — one that preserved institutional alignment, prevented backchanneling, and captured the engagement data from day one. As their CEO put it: if you don't capture the underlying responsiveness and matchmaking data from the beginning, you can never recreate it.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Event-driven automation.</b> Airtable automations fire webhooks into self-hosted n8n, which builds branded payloads and sends transactional email through Brevo — the backbone for every notification in the system.</li>
+      <li><b>Multi-recipient governance.</b> Application confirmations dedupe and route to the Chair while CC'ing the Program Director and Value Analysis lead — preserving institutional alignment by design.</li>
+      <li><b>Invite-and-response tracking.</b> Departments receive opportunity invitations with one-click Interested / Not Interested / Need More Info buttons; responses are recorded and a branded confirmation page is served back.</li>
+      <li><b>Built for the long game.</b> The schema captures a full eight-stage project lifecycle and a reminder cadence (7 / 14 / 21 / 30 days) even while the launch UI exposes only what's needed today.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Institutions from Cedars-Sinai to Mayo, Yale, and Emory onboarded ahead of a rolling launch — on a platform engineered so credibility is earned through participation, not assumed.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Self-hosted n8n</span><span class="tag">Brevo</span><span class="tag">Webhooks</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Pre-launch</span></div>
+  </article>
+
+  <!-- 7. Garf -->
+  <article class="case">
+    <div class="num">07</div>
+    <div class="client">Private Real Estate Portfolio · Operations</div>
+    <h3>A property brain that reads its own documents</h3>
+    <p class="hook"><em>Upload a lease or a mortgage and AI pulls the key dates and writes a summary — but nothing downstream moves until a human signs off.</em></p>
+    <h4>The opportunity</h4>
+    <p>A privately held real-estate portfolio was running on an aging FileMaker Pro system. Critical dates — mortgage maturities, lease expirations — lived buried in documents, and missing one is expensive. They needed a single source of truth that surfaced what mattered before it became urgent.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A relational operations model.</b> A 10-table Airtable base with Properties at the center, linked to mortgages, entities, tenants, leases, contacts, documents, and tasks.</li>
+      <li><b>AI document processing with a human gate.</b> On upload, Airtable's native AI extracts key dates and writes a short summary — then holds it in a <em>pending</em> state. No notification fires until a person reviews and approves it, and a nag email chases anything left pending.</li>
+      <li><b>An expiry engine in plain language.</b> Mortgage alerts at 18 / 12 / 6 months out, commercial-lease alerts on their own schedule, with labels like "6 months out" instead of raw color codes.</li>
+      <li><b>A recurring digest.</b> Every fourth Monday at 10am, a recap email lands for the ops team.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> The AI does the reading, the human keeps the authority — an extract-then-approve pipeline that becomes the trusted spine of the entire notification system, replacing a legacy database with no loss of control.</div>
+    <div class="tags"><span class="tag">Airtable (native AI)</span><span class="tag">Airtable Automations</span><span class="tag">Gmail</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Near handoff</span></div>
+  </article>
+
+  <!-- 8. Piper -->
+  <article class="case">
+    <div class="num">08</div>
+    <div class="client">Coconut Breeze Media · Internal Operations</div>
+    <h3>Piper — the delegation agent that builds while you sleep</h3>
+    <p class="hook"><em>Our own AI operations assistant: hand her a task and she builds the Airtable base, the Make scenario, or the document — scoped so tightly she can only ever email one person.</em></p>
+    <h4>The opportunity</h4>
+    <p>Running a busy agency means a constant stream of "someone should build this." We wanted a delegation target that could actually execute — not just take notes — while being incapable of doing anything risky like contacting a client by mistake.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A capability-scoped sub-agent.</b> Piper builds Make.com scenarios, creates Airtable bases and tables, and writes documents on command.</li>
+      <li><b>A hard guardrail.</b> She can email exactly one person — Juli — and no one else. Need outreach copy? She drafts it as a document for a human to send.</li>
+      <li><b>A strict task standard.</b> Every delegation produces a self-contained brief — deliverable, context, spec, prompt, acceptance criteria, due date — that any developer could pick up cold.</li>
+      <li><b>Smart routing.</b> Tasks route automatically by project type into the right project-management system, mirrored as both an email and a tracked task.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> It's the meta-example — the agency that builds agents runs on one internally. An assistant powerful enough to stand up databases and automations, walled off tightly enough to be trusted with the keys.</div>
+    <div class="tags"><span class="tag">Make MCP</span><span class="tag">Airtable</span><span class="tag">Claude</span><span class="tag">Task routing</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Live · internal</span></div>
+  </article>
+
+</div></div>
+
+<!-- =========================== PLATFORMS =========================== -->
+<div class="band" style="padding-top:64px">
+  <div class="wrap">
+    <div class="kicker">Platforms</div>
+    <h2>The systems teams run their whole business on</h2>
+    <p>When the work outgrows the tools, we replace the stack. These are the custom platforms — built to be owned, edited, and grown by the client long after we're gone.</p>
+  </div>
+</div>
+
+<div class="wrap"><div class="grid">
+
+  <!-- 9. Surescripts -->
+  <article class="case">
+    <div class="num">09</div>
+    <div class="client">Surescripts · Marketing Operations</div>
+    <h3>Replacing enterprise SaaS with a platform the client can actually edit</h3>
+    <p class="hook"><em>A 45-person healthcare marketing org's entire planning system, rebuilt from scratch in native Airtable when their commercial tool was sunset — deliberately engineered so their own admin can change anything after we leave.</em></p>
+    <h4>The opportunity</h4>
+    <p>Surescripts' marketing department was losing Aha to a company-wide sunset, with a hard deadline and no alternative. They needed a full replacement — fast — that could hold their entire four-tier planning hierarchy and survive without a vendor babysitting it.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A four-tier work hierarchy</b> — Plans → Programs → Tactics → Activities — across 15 tables, with 51 tactic templates that generate their own activities.</li>
+      <li><b>A sprint engine.</b> Biweekly automation auto-assigns work, carries over and pulls forward tasks, snapshots history, and flags at-risk activities.</li>
+      <li><b>A business-day date engine.</b> A single consolidated script creates every activity, links prerequisites, computes start and due dates from signed offsets, shifts dependents, and links each activity to the correct sprint — idempotently.</li>
+      <li><b>AI priority scoring</b> via Airtable AI Agents, with a manual fallback, plus management dashboards for sprint health, time-in-status, and review analytics.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> <strong>101 numbered deliverables</strong>, ~45 users, zero custom backend — and built for offboarding: native blocks over vibe-coded shortcuts, every automation self-documented, so the client owns it outright.</div>
+    <div class="tags"><span class="tag">Airtable Business</span><span class="tag">Airtable AI Agents</span><span class="tag">JS automations</span><span class="tag">Microsoft Outlook</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · July 2026 deadline</span></div>
+  </article>
+
+  <!-- 10. The Board -->
+  <article class="case">
+    <div class="num">10</div>
+    <div class="client">THE BOARD · Membership Community</div>
+    <h3>Four tools into one branded platform for 250+ executives</h3>
+    <p class="hook"><em>A world-class community of senior fractional executives, finally with infrastructure to match — one branded product replacing a sprawl of four disconnected tools.</em></p>
+    <h4>The opportunity</h4>
+    <p>THE BOARD had built something rare: a paid community of 250+ senior fractional executives. But it ran across Airtable, Pipedrive, Mighty Networks, and Typeform — four tools, four logins, no single home. The community deserved one.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A Softr-native membership platform + admin CRM</b> spanning member directory, application intake, events, an opportunities board, and member-to-member discovery.</li>
+      <li><b>Deal and pipeline tracking</b> across the community's named programs — Office Hours, Blue Sky, Dream Team, Advisory, Fractional Talent, and more.</li>
+      <li><b>Native application intake</b> replacing Typeform, feeding straight into approval workflows.</li>
+      <li><b>Engagement analytics and a live Slack integration</b> for the admin team.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A genuine <strong>four-into-one consolidation</strong> — Airtable, Pipedrive, Mighty Networks, and Typeform collapsed into a single branded product across three build phases.</div>
+    <div class="tags"><span class="tag">Softr</span><span class="tag">Softr Databases</span><span class="tag">Custom code blocks</span><span class="tag">Make / webhooks</span><span class="tag">Slack</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">Shipped · iterating</span></div>
+  </article>
+
+  <!-- 11. Superhero -->
+  <article class="case">
+    <div class="num">11</div>
+    <div class="client">Superhero Fire Protection · Bid &amp; Design</div>
+    <h3>Win a bid, and the design job spawns itself</h3>
+    <p class="hook"><em>Two spreadsheet systems replaced by one connected platform where awarding a bid automatically creates the full design job — under a permission model that walls designers off from financials.</em></p>
+    <h4>The opportunity</h4>
+    <p>A fire-sprinkler contractor ran bid estimating and design workflow on disconnected spreadsheets. Work fell through the cracks between "we won it" and "design starts," and sensitive estimating data was visible to people who shouldn't see it.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A bid estimating pipeline</b> — intake form, kanban bid board, proposal versioning with revision history, win/loss workflow, and 180-day auto-expiry.</li>
+      <li><b>A design workflow platform</b> — a 15-stage pipeline, an 18-column checklist, designer capacity dashboards, and CAD file request tracking.</li>
+      <li><b>A jurisdiction-aware knowledge base.</b> An editable AHJ (Authority Having Jurisdiction) library attaches the right municipal requirements to each design by jurisdiction.</li>
+      <li><b>Smart automation.</b> Award a bid and a linked design job auto-creates; timeline flags (green / yellow / red) feed a daily 7am digest to the design manager.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> A role-based permission model hides all financials from designers, while winning a bid instantly spins up the design job — connecting two teams that used to hand off by spreadsheet. Seeded with ~65 companies, ~120 contacts, and ~40 jurisdictions for a live pilot.</div>
+    <div class="tags"><span class="tag">Airtable Enterprise</span><span class="tag">Interfaces</span><span class="tag">Automations</span><span class="tag">Microsoft 365 / Outlook</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill live">In live pilot</span></div>
+  </article>
+
+  <!-- 12. MEP -->
+  <article class="case">
+    <div class="num">12</div>
+    <div class="client">Markell Estate Planning · Legal Operations</div>
+    <h3>A multi-system client portal for a law firm</h3>
+    <p class="hook"><em>Clio, Airtable, SharePoint, and a 100-user client portal wired into one system — with a hard line that there's no go-live until the data-isolation test passes.</em></p>
+    <h4>The opportunity</h4>
+    <p>An estate-planning and elder-law firm needed a way to manage client assets and matters across the tools they already lived in — their legal CRM, their document store — plus a secure portal clients could actually use, without anyone ever seeing another client's data.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>An asset-management system</b> — a 10-table Airtable base for matters, contacts, assets, tasks, and templated emails, with staff dashboards surfacing missing assets, upcoming meetings, and stalled work.</li>
+      <li><b>Two-way system sync.</b> Zapier keeps Clio and Airtable in step and routes documents into SharePoint, including a deep-link bridge that writes the Airtable matter URL back into Clio.</li>
+      <li><b>An attorney recommendation engine</b> that looks up the right templated email by recommendation type and drives a review queue.</li>
+      <li><b>A secure client portal.</b> A Softr portal sized for ~100 users with 2FA, session timeout, and per-client data isolation.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> <strong>70 numbered deliverables</strong> across nine sprint weeks, integrating four systems — with security treated as non-negotiable: no go-live until a cross-client data-isolation stress test passes.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Zapier</span><span class="tag">Clio</span><span class="tag">SharePoint / M365</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill build">Mid-build · on schedule</span></div>
+  </article>
+
+</div></div>
+
+<!-- CTA -->
+<div class="wrap">
+  <div class="cta-band">
+    <h2>Have a workflow that should run itself?</h2>
+    <p>If a person on your team is doing something repetitive, judgment-heavy, or spread across five tools, there's probably an agent for it. Let's find the one worth building first.</p>
+    <a href="https://www.coconutbreezemedia.com/contact">Start a conversation</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="brand"><span class="mark"></span>Coconut Breeze Media</div>
+    <div>Digital Operations &amp; Automation Agency · Custom platforms, workflow automation, and AI agents.</div>
+    <div style="margin-top:8px">© 2026 Coconut Breeze Media · <a href="https://www.coconutbreezemedia.com/case-studies">View full case studies →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
