@@ -123,6 +123,7 @@
     padding:5px 12px;border-radius:200px}
   .pill.live{background:rgba(46,110,106,.14);color:var(--teal);border:1px solid rgba(46,110,106,.3)}
   .pill.build{background:rgba(135,105,74,.16);color:var(--brown);border:1px solid var(--line)}
+  .pill.kit{background:rgba(46,110,106,.06);color:var(--teal);border:1px dashed rgba(46,110,106,.45)}
 
   /* CTA */
   .cta-band{margin:72px 0 0;background:var(--brown-deep);color:var(--cream);
@@ -159,7 +160,7 @@
     <h1>We build the <em>agents</em> that run the work behind the work.</h1>
     <p class="lede">Coconut Breeze Media designs custom AI agents, automation systems, and operational platforms that quietly carry the load — vetting contacts, sequencing outreach, turning video into content, reading documents, and replacing the legacy tools teams have outgrown. Here are some of the systems we've shipped.</p>
     <div class="meta">
-      <div class="stat"><b>8</b><span>Agents shipped</span></div>
+      <div class="stat"><b>14</b><span>Agent builds</span></div>
       <div class="stat"><b>7+</b><span>Industries served</span></div>
       <div class="stat"><b>24/7</b><span>Always on</span></div>
       <div class="stat"><b>Days&nbsp;→&nbsp;hrs</b><span>Work compressed</span></div>
@@ -337,6 +338,126 @@
     <div class="result"><strong>The edge —</strong> It's the meta-example — the agency that builds agents runs on one internally. An assistant powerful enough to stand up databases and automations, walled off tightly enough to be trusted with the keys.</div>
     <div class="tags"><span class="tag">Make MCP</span><span class="tag">Airtable</span><span class="tag">Claude</span><span class="tag">Task routing</span></div>
     <div class="pill-row" style="margin-top:16px"><span class="pill live">Live · internal</span></div>
+  </article>
+
+  <!-- 9. Business card to CRM -->
+  <article class="case">
+    <div class="num">09</div>
+    <div class="client">Field Sales &amp; Events · Contact Capture</div>
+    <h3>Snap a business card, get a clean CRM record</h3>
+    <p class="hook"><em>A photo of a business card becomes an enriched, deduped contact and a queued follow-up — before you've even left the conversation.</em></p>
+    <h4>The opportunity</h4>
+    <p>Business cards pile up and die in a drawer. The data is only worth anything if it lands in the CRM the day you collect it — complete, correct, and ready to act on.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Photo in, structured data out.</b> A vision model reads the card straight from a phone snapshot — name, title, company, email, phone, website.</li>
+      <li><b>Auto-enrichment.</b> The contact is verified and enriched (company, role, verified email) before anything is saved.</li>
+      <li><b>Dedupe and write-back.</b> It checks the CRM for an existing record, merges instead of duplicating, and writes a clean entry tagged with source and date.</li>
+      <li><b>A follow-up, queued.</b> It drafts a tailored follow-up and creates the task, so no lead ever goes cold.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> The whole capture-to-CRM motion collapses into a single photo — the same enrichment brain behind our conference-vetting agent, pointed at your camera roll.</div>
+    <div class="tags"><span class="tag">Vision OCR</span><span class="tag">Airtable / HubSpot</span><span class="tag">Dropcontact</span><span class="tag">Claude</span><span class="tag">Mobile capture</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 10. Event Stripe booking + Brevo -->
+  <article class="case">
+    <div class="num">10</div>
+    <div class="client">Events &amp; Experiences · Bookings</div>
+    <h3>A branded booking form that takes payment and confirms itself</h3>
+    <p class="hook"><em>Guests book and pay in one flow, and a branded confirmation and reminder sequence go out automatically — no spreadsheet, no manual invoicing, no chasing.</em></p>
+    <h4>The opportunity</h4>
+    <p>Paid events lose money and goodwill at the seams — manual invoicing, missed confirmations, day-of no-shows. The booking, the payment, and the communications should be one connected system, not three.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>A branded booking form wired to Stripe</b> for instant, secure payment at the point of registration.</li>
+      <li><b>One source of truth.</b> Every booking writes to a single events database — capacity, attendee details, and payment status in one place.</li>
+      <li><b>Branded email through Brevo.</b> A confirmation on purchase, reminders before the event, and a follow-up after — all in the client's brand, not a generic receipt.</li>
+      <li><b>Self-managing capacity.</b> Sold-out events trigger waitlist logic automatically.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Registration, payment, and a polished branded inbox experience in one automated flow — the operations layer behind a real event portal, not a generic form builder.</div>
+    <div class="tags"><span class="tag">Stripe</span><span class="tag">Brevo</span><span class="tag">Airtable / Softr</span><span class="tag">Webhooks</span><span class="tag">Branded email</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 11. Applicant vetting -->
+  <article class="case">
+    <div class="num">11</div>
+    <div class="client">Hiring &amp; Recruiting · Applicant Screening</div>
+    <h3>Applicants screened automatically — with the receipts</h3>
+    <p class="hook"><em>Every applicant is researched across the open web, scored against your criteria, and approved or denied automatically — each decision backed by links to exactly what was found.</em></p>
+    <h4>The opportunity</h4>
+    <p>Screening applicants by hand is slow and inconsistent, and gut-feel rejections are hard to defend. The team wanted speed and a paper trail — decisions that are both fast and auditable.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Open-web research.</b> The agent pulls each applicant's public footprint — profiles, work, mentions — automatically.</li>
+      <li><b>Scored against your rules.</b> It rates every applicant against the criteria that matter to you, with a written rationale and a confidence level.</li>
+      <li><b>Auto approve, deny, or escalate.</b> Clear-cut cases route themselves; borderline ones go to a human queue.</li>
+      <li><b>Cited evidence.</b> Every verdict links back to the sources behind it, so any call can be checked.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Defensible decisions at speed — the system never says "trust me," it says "here's the link." A descendant of our influencer-scoring engine, retargeted from partnerships onto people.</div>
+    <div class="tags"><span class="tag">Perplexity / Firecrawl</span><span class="tag">Claude (scoring)</span><span class="tag">Airtable</span><span class="tag">Evidence links</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 12. Trend tracking -->
+  <article class="case">
+    <div class="num">12</div>
+    <div class="client">Content &amp; Marketing · Trend Intelligence</div>
+    <h3>An RSS firehose that ranks the trends that matter</h3>
+    <p class="hook"><em>Point it at the feeds you care about and it reads everything, ranks the top trends and stories every day, and hands your team a briefing instead of a backlog.</em></p>
+    <h4>The opportunity</h4>
+    <p>Staying on top of a beat means drowning in feeds. The signal is in there — it just needs to be read, ranked, and summarized faster than any human can keep up with.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Continuous ingestion.</b> It pulls from any set of RSS and news sources on a schedule.</li>
+      <li><b>LLM ranking.</b> Stories are scored and clustered by momentum and relevance to your niche — not just recency.</li>
+      <li><b>A daily briefing.</b> The top trends land as a ranked digest — headline, why it matters, source — wherever your team already works.</li>
+      <li><b>Trend memory.</b> It tracks what's rising versus fading over time, so you see the curve, not just today's snapshot.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Your team starts the day with the ten things worth knowing, ranked — instead of fifty open tabs.</div>
+    <div class="tags"><span class="tag">RSS</span><span class="tag">Claude (ranking)</span><span class="tag">n8n / Make</span><span class="tag">Slack / Email digest</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 13. Smart team scheduling -->
+  <article class="case">
+    <div class="num">13</div>
+    <div class="client">Operations · Team Scheduling</div>
+    <h3>Sprint-aware scheduling that respects everyone's capacity</h3>
+    <p class="hook"><em>Work assigns itself across the sprint by who actually has room — so your best people stop drowning while others sit idle.</em></p>
+    <h4>The opportunity</h4>
+    <p>Manual sprint planning either overloads top performers or leaves capacity on the table. The schedule should know who's free and balance itself — not depend on someone holding the whole team's bandwidth in their head.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Capacity-aware assignment.</b> Each team member's available hours per sprint are modeled, and work is matched to real headroom.</li>
+      <li><b>Sprint cadence built in.</b> Tasks carry over, pull forward, and rebalance automatically as the sprint moves.</li>
+      <li><b>Load visibility.</b> Green / yellow / red flags show who's heading toward overload before it happens.</li>
+      <li><b>Auto-rebalancing.</b> When priorities shift, the schedule redistributes instead of breaking.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> The sprint engine we built into an enterprise platform, generalized — scheduling that protects your team's capacity instead of quietly ignoring it.</div>
+    <div class="tags"><span class="tag">Airtable</span><span class="tag">Automations</span><span class="tag">Capacity modeling</span><span class="tag">Sprint logic</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
+  </article>
+
+  <!-- 14. Community insights to social calendar -->
+  <article class="case">
+    <div class="num">14</div>
+    <div class="client">Membership Community · Social Intelligence</div>
+    <h3>Turn what your community is talking about into next week's content</h3>
+    <p class="hook"><em>The agent reads what your groups are actually posting, surfaces the themes gaining heat, and turns them into a ready-to-go social calendar.</em></p>
+    <h4>The opportunity</h4>
+    <p>The best content ideas are already inside your community's conversations — but nobody has time to read every group and translate the patterns into a posting plan.</p>
+    <h4>What we built</h4>
+    <ul>
+      <li><b>Conversation listening.</b> It reads what's being posted across community groups and channels.</li>
+      <li><b>Theme detection.</b> Recurring questions, hot topics, and emerging language get clustered into content-ready themes.</li>
+      <li><b>Calendar generation.</b> Each theme becomes scheduled social posts mapped across the week, in your brand voice.</li>
+      <li><b>A feedback loop.</b> What resonates feeds back in, so the calendar sharpens with every cycle.</li>
+    </ul>
+    <div class="result"><strong>The edge —</strong> Your social calendar stops being a guessing game — it becomes a direct readout of what your own community cares about right now.</div>
+    <div class="tags"><span class="tag">Community data</span><span class="tag">Claude (analysis)</span><span class="tag">Content calendar</span><span class="tag">Social scheduling</span></div>
+    <div class="pill-row" style="margin-top:16px"><span class="pill kit">Build pattern</span></div>
   </article>
 
 </div></div>
