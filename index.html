@@ -159,10 +159,10 @@
     <h1>We build the <em>agents</em> that run the work behind the work.</h1>
     <p class="lede">Coconut Breeze Media designs custom AI agents, automation systems, and operational platforms that quietly carry the load — vetting contacts, sequencing outreach, turning video into content, reading documents, and replacing the legacy tools teams have outgrown. Here are some of the systems we've shipped.</p>
     <div class="meta">
-      <div class="stat"><b>12</b><span>Systems shipped</span></div>
-      <div class="stat"><b>8+</b><span>Industries served</span></div>
-      <div class="stat"><b>250+</b><span>Users on a single build</span></div>
-      <div class="stat"><b>4 → 1</b><span>Tools consolidated</span></div>
+      <div class="stat"><b>8</b><span>Agents shipped</span></div>
+      <div class="stat"><b>7+</b><span>Industries served</span></div>
+      <div class="stat"><b>24/7</b><span>Always on</span></div>
+      <div class="stat"><b>Days&nbsp;→&nbsp;hrs</b><span>Work compressed</span></div>
     </div>
   </div>
 </section>
@@ -178,14 +178,14 @@
 
 <div class="wrap"><div class="grid">
 
-  <!-- 1. Sophie James -->
+  <!-- 1. Influencer vetting agent -->
   <article class="case">
     <div class="num">01</div>
-    <div class="client">Sophie James Wine · Influencer Marketing</div>
+    <div class="client">Premium Wine Brand · Influencer Marketing</div>
     <h3>An AI talent scout that thinks like the founder</h3>
     <p class="hook"><em>We turned a winemaker's gut instinct for "which creator is actually worth a paid partnership" into a skeptical-by-default AI analyst that scores every candidate 1–5 — with reasons.</em></p>
     <h4>The opportunity</h4>
-    <p>Sophie James Wine needed to find wine and lifestyle influencers worth partnering with — fast, at volume, and without lowering the bar. The hard part wasn't finding creators; it was judgment. A creator with a huge following can convert nobody, while a quiet LTK-native can outperform everyone. That instinct lived only in the founders' heads.</p>
+    <p>A premium wine brand needed to find wine and lifestyle influencers worth partnering with — fast, at volume, and without lowering the bar. The hard part wasn't finding creators; it was judgment. A creator with a huge following can convert nobody, while a quiet LTK-native can outperform everyone. That instinct lived only in the founders' heads.</p>
     <h4>What we built</h4>
     <ul>
       <li><b>Sourcing at scale.</b> Apify scrapes Instagram and Facebook by hashtag and search term (#LTK, "wine night"), geo-filtered to the US and automatically excluding states wine can't ship to.</li>
@@ -198,8 +198,8 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill build">Active build</span></div>
   </article>
 
-  <!-- 2. Matador Sales Agent -->
-  <!-- ⚠️ CONFIDENTIALITY: softened on purpose. Do NOT publish that named live reps are AI. Get Greg's OK first. -->
+  <!-- 2. AI sales personas -->
+  <!-- NOTE: anonymized + softened on purpose. Do NOT publish that named live reps are AI without client sign-off. -->
   <article class="case">
     <div class="num">02</div>
     <div class="client">Travel Media Network · Partnership Sales</div>
@@ -219,19 +219,19 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill live">Live in production</span></div>
   </article>
 
-  <!-- 3. Matador Content Engine -->
+  <!-- 3. Video-to-content engine -->
   <article class="case">
     <div class="num">03</div>
-    <div class="client">Matador Network · Content Operations</div>
+    <div class="client">Travel Media Network · Content Operations</div>
     <h3>One form turns any video into a publish-ready article and a creator script</h3>
     <p class="hook"><em>Drop a TikTok, Reel, or YouTube link into a form and an autonomous pipeline scrapes it, transcribes it, and hands back two original pieces — written to never recycle the source.</em></p>
     <h4>The opportunity</h4>
-    <p>Matador Network's team was spending hours turning short-form video into written content. They needed a way to go from "interesting clip" to "draft an editor can ship" without a person babysitting every step — and without producing thin rewrites of the original.</p>
+    <p>A travel-media team was spending hours turning short-form video into written content. They needed a way to go from "interesting clip" to "draft an editor can ship" without a person babysitting every step — and without producing thin rewrites of the original.</p>
     <h4>What we built</h4>
     <ul>
       <li><b>A 23-node n8n pipeline</b> triggered by a single Airtable form submission, polling for new entries every minute.</li>
       <li><b>Platform-aware ingestion.</b> It routes by source — scraping YouTube, TikTok, or Instagram via the right Apify actor — and where there's no caption track, downloads the video and transcribes it with Whisper.</li>
-      <li><b>Two specialized AI writers.</b> One drafts a 60–90 second green-screen creator script; the other writes an original 800-word article in Matador's voice. Both are explicitly instructed to be distinctly different from the source — no recycled hooks, no clichés.</li>
+      <li><b>Two specialized AI writers.</b> One drafts a 60–90 second green-screen creator script; the other writes an original 800-word article in the brand's house voice. Both are explicitly instructed to be distinctly different from the source — no recycled hooks, no clichés.</li>
       <li><b>Self-healing and hands-off.</b> Drafts write back to Airtable and Slack-notify the assigned editor; any node failure logs the error and DMs the team automatically.</li>
     </ul>
     <div class="result"><strong>The edge —</strong> A companion automation reads a Google Drive folder every weekday morning and generates project-management epics and stories from unstructured requirement docs — reported to take a recurring task from <strong>days down to hours</strong>.</div>
@@ -259,10 +259,10 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill live">Reusable pattern</span></div>
   </article>
 
-  <!-- 5. Rohde & Schwarz Lead Velocity -->
+  <!-- 5. Outbound sequencing engine -->
   <article class="case">
     <div class="num">05</div>
-    <div class="client">Rohde &amp; Schwarz · Outbound Sales</div>
+    <div class="client">Global Test &amp; Measurement Company · Outbound Sales</div>
     <h3>"Lead Velocity" — codifying the best rep's instincts into automated sequences</h3>
     <p class="hook"><em>We took what the team's strongest account managers do organically — the right touch, in the right channel, on the right day — and turned it into a repeatable engine that never drops a follow-up.</em></p>
     <h4>The opportunity</h4>
@@ -279,14 +279,14 @@
     <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · hourly consulting</span></div>
   </article>
 
-  <!-- 6. POST -->
+  <!-- 6. Governed matchmaking engine -->
   <article class="case">
     <div class="num">06</div>
-    <div class="client">AOC · POST (postmedtech.com)</div>
+    <div class="client">Academic Medical Society · Matchmaking Platform</div>
     <h3>A governed matchmaking engine for academic MedTech</h3>
     <p class="hook"><em>Not a directory — a controlled, feedback-driven ecosystem where academic departments, MedTech companies, and key opinion leaders are matched, tracked, and held to institutional standards.</em></p>
     <h4>The opportunity</h4>
-    <p>AOC needed a trusted way to connect university orthopaedic departments with MedTech and pharma companies — one that preserved institutional alignment, prevented backchanneling, and captured the engagement data from day one. As their CEO put it: if you don't capture the underlying responsiveness and matchmaking data from the beginning, you can never recreate it.</p>
+    <p>A national academic medical society needed a trusted way to connect university departments with MedTech and pharma companies — one that preserved institutional alignment, prevented backchanneling, and captured the engagement data from day one. As their CEO put it: if you don't capture the underlying responsiveness and matchmaking data from the beginning, you can never recreate it.</p>
     <h4>What we built</h4>
     <ul>
       <li><b>Event-driven automation.</b> Airtable automations fire webhooks into self-hosted n8n, which builds branded payloads and sends transactional email through Brevo — the backbone for every notification in the system.</li>
@@ -294,7 +294,7 @@
       <li><b>Invite-and-response tracking.</b> Departments receive opportunity invitations with one-click Interested / Not Interested / Need More Info buttons; responses are recorded and a branded confirmation page is served back.</li>
       <li><b>Built for the long game.</b> The schema captures a full eight-stage project lifecycle and a reminder cadence (7 / 14 / 21 / 30 days) even while the launch UI exposes only what's needed today.</li>
     </ul>
-    <div class="result"><strong>The edge —</strong> Institutions from Cedars-Sinai to Mayo, Yale, and Emory onboarded ahead of a rolling launch — on a platform engineered so credibility is earned through participation, not assumed.</div>
+    <div class="result"><strong>The edge —</strong> Leading academic medical centers across the country onboarded ahead of a rolling launch — on a platform engineered so credibility is earned through participation, not assumed.</div>
     <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Self-hosted n8n</span><span class="tag">Brevo</span><span class="tag">Webhooks</span></div>
     <div class="pill-row" style="margin-top:16px"><span class="pill build">Pre-launch</span></div>
   </article>
@@ -337,99 +337,6 @@
     <div class="result"><strong>The edge —</strong> It's the meta-example — the agency that builds agents runs on one internally. An assistant powerful enough to stand up databases and automations, walled off tightly enough to be trusted with the keys.</div>
     <div class="tags"><span class="tag">Make MCP</span><span class="tag">Airtable</span><span class="tag">Claude</span><span class="tag">Task routing</span></div>
     <div class="pill-row" style="margin-top:16px"><span class="pill live">Live · internal</span></div>
-  </article>
-
-</div></div>
-
-<!-- =========================== PLATFORMS =========================== -->
-<div class="band" style="padding-top:64px">
-  <div class="wrap">
-    <div class="kicker">Platforms</div>
-    <h2>The systems teams run their whole business on</h2>
-    <p>When the work outgrows the tools, we replace the stack. These are the custom platforms — built to be owned, edited, and grown by the client long after we're gone.</p>
-  </div>
-</div>
-
-<div class="wrap"><div class="grid">
-
-  <!-- 9. Healthcare marketing ops platform -->
-  <article class="case">
-    <div class="num">09</div>
-    <div class="client">Healthcare Technology Company · Marketing Operations</div>
-    <h3>Replacing enterprise SaaS with a platform the client can actually edit</h3>
-    <p class="hook"><em>A 45-person healthcare marketing org's entire planning system, rebuilt from scratch in native Airtable when their commercial tool was sunset — deliberately engineered so their own admin can change anything after we leave.</em></p>
-    <h4>The opportunity</h4>
-    <p>A healthcare-technology company's marketing department was losing its enterprise roadmapping tool to a company-wide sunset, with a hard deadline and no alternative. They needed a full replacement — fast — that could hold their entire four-tier planning hierarchy and survive without a vendor babysitting it.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A four-tier work hierarchy</b> — Plans → Programs → Tactics → Activities — across 15 tables, with 51 tactic templates that generate their own activities.</li>
-      <li><b>A sprint engine.</b> Biweekly automation auto-assigns work, carries over and pulls forward tasks, snapshots history, and flags at-risk activities.</li>
-      <li><b>A business-day date engine.</b> A single consolidated script creates every activity, links prerequisites, computes start and due dates from signed offsets, shifts dependents, and links each activity to the correct sprint — idempotently.</li>
-      <li><b>AI priority scoring</b> via Airtable AI Agents, with a manual fallback, plus management dashboards for sprint health, time-in-status, and review analytics.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> <strong>101 numbered deliverables</strong>, ~45 users, zero custom backend — and built for offboarding: native blocks over vibe-coded shortcuts, every automation self-documented, so the client owns it outright.</div>
-    <div class="tags"><span class="tag">Airtable Business</span><span class="tag">Airtable AI Agents</span><span class="tag">JS automations</span><span class="tag">Microsoft Outlook</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Active · July 2026 deadline</span></div>
-  </article>
-
-  <!-- 10. The Board -->
-  <article class="case">
-    <div class="num">10</div>
-    <div class="client">THE BOARD · Membership Community</div>
-    <h3>Four tools into one branded platform for 250+ executives</h3>
-    <p class="hook"><em>A world-class community of senior fractional executives, finally with infrastructure to match — one branded product replacing a sprawl of four disconnected tools.</em></p>
-    <h4>The opportunity</h4>
-    <p>THE BOARD had built something rare: a paid community of 250+ senior fractional executives. But it ran across Airtable, Pipedrive, Mighty Networks, and Typeform — four tools, four logins, no single home. The community deserved one.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A Softr-native membership platform + admin CRM</b> spanning member directory, application intake, events, an opportunities board, and member-to-member discovery.</li>
-      <li><b>Deal and pipeline tracking</b> across the community's named programs — Office Hours, Blue Sky, Dream Team, Advisory, Fractional Talent, and more.</li>
-      <li><b>Native application intake</b> replacing Typeform, feeding straight into approval workflows.</li>
-      <li><b>Engagement analytics and a live Slack integration</b> for the admin team.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> A genuine <strong>four-into-one consolidation</strong> — Airtable, Pipedrive, Mighty Networks, and Typeform collapsed into a single branded product across three build phases.</div>
-    <div class="tags"><span class="tag">Softr</span><span class="tag">Softr Databases</span><span class="tag">Custom code blocks</span><span class="tag">Make / webhooks</span><span class="tag">Slack</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill live">Shipped · iterating</span></div>
-  </article>
-
-  <!-- 11. Fire sprinkler contractor -->
-  <article class="case">
-    <div class="num">11</div>
-    <div class="client">Fire Sprinkler Contractor · Bid &amp; Design</div>
-    <h3>Win a bid, and the design job spawns itself</h3>
-    <p class="hook"><em>Two spreadsheet systems replaced by one connected platform where awarding a bid automatically creates the full design job — under a permission model that walls designers off from financials.</em></p>
-    <h4>The opportunity</h4>
-    <p>A fire-sprinkler contractor ran bid estimating and design workflow on disconnected spreadsheets. Work fell through the cracks between "we won it" and "design starts," and sensitive estimating data was visible to people who shouldn't see it.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>A bid estimating pipeline</b> — intake form, kanban bid board, proposal versioning with revision history, win/loss workflow, and 180-day auto-expiry.</li>
-      <li><b>A design workflow platform</b> — a 15-stage pipeline, an 18-column checklist, designer capacity dashboards, and CAD file request tracking.</li>
-      <li><b>A jurisdiction-aware knowledge base.</b> An editable AHJ (Authority Having Jurisdiction) library attaches the right municipal requirements to each design by jurisdiction.</li>
-      <li><b>Smart automation.</b> Award a bid and a linked design job auto-creates; timeline flags (green / yellow / red) feed a daily 7am digest to the design manager.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> A role-based permission model hides all financials from designers, while winning a bid instantly spins up the design job — connecting two teams that used to hand off by spreadsheet. Seeded with ~65 companies, ~120 contacts, and ~40 jurisdictions for a live pilot.</div>
-    <div class="tags"><span class="tag">Airtable Enterprise</span><span class="tag">Interfaces</span><span class="tag">Automations</span><span class="tag">Microsoft 365 / Outlook</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill live">In live pilot</span></div>
-  </article>
-
-  <!-- 12. Law firm client portal -->
-  <article class="case">
-    <div class="num">12</div>
-    <div class="client">Estate Planning &amp; Elder Law Firm · Legal Operations</div>
-    <h3>A multi-system client portal for a law firm</h3>
-    <p class="hook"><em>Clio, Airtable, SharePoint, and a 100-user client portal wired into one system — with a hard line that there's no go-live until the data-isolation test passes.</em></p>
-    <h4>The opportunity</h4>
-    <p>An estate-planning and elder-law firm needed a way to manage client assets and matters across the tools they already lived in — their legal CRM, their document store — plus a secure portal clients could actually use, without anyone ever seeing another client's data.</p>
-    <h4>What we built</h4>
-    <ul>
-      <li><b>An asset-management system</b> — a 10-table Airtable base for matters, contacts, assets, tasks, and templated emails, with staff dashboards surfacing missing assets, upcoming meetings, and stalled work.</li>
-      <li><b>Two-way system sync.</b> Zapier keeps Clio and Airtable in step and routes documents into SharePoint, including a deep-link bridge that writes the Airtable matter URL back into Clio.</li>
-      <li><b>An attorney recommendation engine</b> that looks up the right templated email by recommendation type and drives a review queue.</li>
-      <li><b>A secure client portal.</b> A Softr portal sized for ~100 users with 2FA, session timeout, and per-client data isolation.</li>
-    </ul>
-    <div class="result"><strong>The edge —</strong> <strong>70 numbered deliverables</strong> across nine sprint weeks, integrating four systems — with security treated as non-negotiable: no go-live until a cross-client data-isolation stress test passes.</div>
-    <div class="tags"><span class="tag">Airtable</span><span class="tag">Softr</span><span class="tag">Zapier</span><span class="tag">Clio</span><span class="tag">SharePoint / M365</span></div>
-    <div class="pill-row" style="margin-top:16px"><span class="pill build">Mid-build · on schedule</span></div>
   </article>
 
 </div></div>
