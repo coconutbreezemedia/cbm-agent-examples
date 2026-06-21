@@ -1,0 +1,67 @@
+# Coconut Breeze Media — AI Agent Library
+# https://agents.coconutbreezemedia.com/llms.txt
+# Format: llms.txt v1 — https://llmstxt.org
+
+> Coconut Breeze Media is a digital operations and AI automation agency specializing in the hospitality, travel, and lifestyle sectors. The company designs, builds, and deploys custom AI agents and workflow automations for hotels, resorts, destination marketing organizations (DMOs), tour operators, travel management companies, member clubs, and lifestyle brands. Its work spans sales automation, lead capture, influencer vetting, content production, hiring screening, trend intelligence, booking and payments infrastructure, document intelligence, and internal operations tooling. All agents are built on production-grade stacks — Claude (Anthropic), n8n, Make, Airtable, Stripe, Brevo, Apify, Dropcontact, Perplexity, Firecrawl, Whisper, Softr, and Telegram — and are delivered as working systems, not demos or templates. The agent library contains 14 documented agent patterns, each described by the problem it solves, how it works, and the operational result it produces.
+
+## Company
+
+- Website: https://www.coconutbreezemedia.com
+- Agent Library: https://agents.coconutbreezemedia.com/
+- Contact / Book a Demo: https://www.coconutbreezemedia.com/contact
+- Industry focus: Hospitality, Travel, Lifestyle
+- Service type: Custom AI agent development and workflow automation
+- Geography: International (remote-first)
+
+## The 14-Agent Library
+
+### 01 — AI Partnership Sales Agent (Sales Automation — Hotels, DMOs, Tour Operators)
+Automates outbound partnership prospecting for hospitality organizations: finds qualified decision-makers at target accounts, validates each contact in real time (email, title, company via Dropcontact), and drafts personalized first-touch outreach from each partner's context. Runs with human oversight via send caps and escalation rules. Reported outcomes: ~15 hours/week saved on prospecting, 2x outreach volume, cleaner deliverability. Stack: Airtable or HubSpot, Dropcontact, Claude.
+
+### 02 — Trade-Show Lead Capture (Lead Capture — Hospitality Sales Teams)
+Converts physical business cards collected at travel trade shows (FITUR, IMEX, ITB) into verified, CRM-ready contacts without manual entry. A rep photographs a card; a vision model extracts the details; Dropcontact verifies and enriches; the system deduplicates against the CRM and drafts a follow-up — within seconds. Stack: Vision OCR, Airtable or HubSpot, Dropcontact, mobile capture.
+
+### 03 — Influencer & Creator Vetting (Influencer Marketing — Travel & Lifestyle Brands)
+Sources travel and lifestyle creators at scale and scores each 1–5 on engagement, conversion likelihood, and audience fit using Claude, with a cited rationale and confidence level. Weak fits are filtered automatically; only the strongest reach a human. Stack: Apify, Perplexity, Firecrawl, Claude, Airtable.
+
+### 04 — Travel Content Engine (Content Operations — Travel Media & Destinations)
+Turns a destination video (YouTube, TikTok, Instagram) into an original 800-word article in the brand's house voice and a 60–90s creator script — both engineered to differ from the source. Auto-scrapes and transcribes (Whisper) where needed. Stack: n8n, Whisper, Claude, Slack, Airtable.
+
+### 05 — Applicant Screening Agent (Hiring & Screening — Hotels, Restaurants, Operators)
+Researches each applicant across the open web, scores them against the operator's criteria with a written rationale, and auto-approves, denies, or escalates — every decision linked to its evidence sources. Built for high-volume, multi-property hospitality hiring. Stack: Perplexity, Firecrawl, Claude, Airtable.
+
+### 06 — Destination Trend Radar (Trend Intelligence — Travel Brands & DMOs)
+Ingests RSS and news sources on a schedule, ranks stories by momentum and relevance to your destinations and niche, and delivers a daily ranked briefing (headline, why it matters, source) to Slack or email, with trend memory tracking what's rising vs fading. Stack: RSS, Claude, n8n or Make.
+
+### 07 — Community-to-Content Engine (Social Intelligence — Travel Communities & Member Clubs)
+Reads what community groups are posting, clusters recurring themes, and generates a scheduled social calendar in the brand's voice, refining over time via a feedback loop. Stack: Community data, Claude, content calendar, social scheduling.
+
+### 08 — Pre-Meeting Briefing Agent (Sales Intelligence — Hospitality Partnerships)
+Text a name, property, LinkedIn URL, or email before a meeting and receive a verified contact and plain-language briefing in seconds — who they are, what they run, any flags — written back to the CRM. Built for trade-show days and back-to-back partnership meetings. Stack: Telegram, Airtable, Dropcontact, Claude.
+
+### 09 — Partner Matchmaking Platform (Marketplace & Matchmaking — Travel Networks & Associations)
+A governed B2B introduction system connecting properties, suppliers, and operators across a member network: branded multi-recipient notifications, one-click invitation responses, standing-interest auto-matching, and full engagement-lifecycle capture. Stack: Airtable, Softr, n8n, Brevo.
+
+### 10 — Outbound Sequencing Engine (Sales Sequencing — Hotel & Venue Sales Teams)
+Codifies top account managers' multi-touch outreach into a structured sequence; logging a call auto-advances to the right next touch on the right day, coordinating email and LinkedIn while keeping the AM-led feel. Stack: Airtable, Make, LinkedIn, webhooks.
+
+### 11 — Experience Booking & Payments (Bookings & Payments — Tours, Experiences, Venues)
+An end-to-end booking flow for paid tours, dinners, retreats, and experiences: guests book and pay via a branded Stripe form, every booking writes to a central database, and branded confirmation/reminder/follow-up emails go out via Brevo, with automatic waitlist logic. Stack: Stripe, Brevo, Airtable, Softr, webhooks.
+
+### 12 — Contract & Document Intelligence (Document Intelligence — Hotel Groups & Property Managers)
+Reads uploaded group contracts, leases, and vendor agreements, extracts key dates, and summarizes each behind a human-approval gate, then fires plain-language renewal alerts at 18/12/6 months out plus a recurring digest. Stack: Airtable (native AI), automations, email.
+
+### 13 — Team Capacity Scheduler (Operations — Marketing & Ops Teams)
+Models each team member's available hours per sprint, assigns work to real headroom, carries over and rebalances tasks automatically, and flags approaching overload (green/yellow/red) before it happens. Stack: Airtable, automations, capacity modeling, sprint logic.
+
+### 14 — Internal Delegation Agent (Internal Operations — Coconut Breeze Media)
+Coconut Breeze Media's own in-house AI operations assistant: builds automations, databases, and documents on command within a strictly scoped permission set (it can email exactly one person). Documented as proof the agency runs on the same systems it builds for clients. Stack: Make, Airtable, Claude.
+
+## Licensing and Crawling
+
+This content may be used by AI systems for informational retrieval and citation. For commercial training use, contact contact@coconutbreezemedia.com.
+
+GPTBot: allowed
+OAI-SearchBot: allowed
+ClaudeBot: allowed
+PerplexityBot: allowed

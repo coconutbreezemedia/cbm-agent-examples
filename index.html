@@ -3,11 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AI Agent Library | Coconut Breeze Media</title>
-<meta name="description" content="A library of custom AI agents and automations Coconut Breeze Media builds for hospitality, travel, and lifestyle brands — lead capture, partner vetting, content engines, bookings, and more." />
-<meta property="og:title" content="AI Agent Library | Coconut Breeze Media" />
-<meta property="og:description" content="Agents that could be yours — built for hospitality, travel, and lifestyle teams." />
+<title>AI Agents for Hospitality &amp; Travel | Coconut Breeze Media</title>
+<meta name="description" content="Custom AI agents and workflow automation for hotels, DMOs, resorts, and travel brands. 14 working patterns: lead capture, influencer vetting, content engines, bookings, contract intelligence, and more." />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Coconut Breeze Media" />
+<link rel="canonical" href="https://agents.coconutbreezemedia.com/" />
+<meta property="og:title" content="AI Agents for Hospitality &amp; Travel | Coconut Breeze Media" />
+<meta property="og:description" content="Custom AI agents for hospitality, travel, and lifestyle brands — lead capture, influencer vetting, content engines, bookings, and more. Browse 14 working patterns." />
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://agents.coconutbreezemedia.com/" />
+<meta property="og:site_name" content="Coconut Breeze Media" />
+<meta property="og:image" content="https://static.wixstatic.com/media/dca658_1965f681d4384dae81c14012889cbf2a~mv2.png/v1/fill/w_1200,h_630,al_c/dca658_1965f681d4384dae81c14012889cbf2a~mv2.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Coconut Breeze Media — AI Agents for Hospitality &amp; Travel" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Agents for Hospitality &amp; Travel | Coconut Breeze Media" />
+<meta name="twitter:description" content="Custom AI agents for hospitality, travel, and lifestyle brands. Browse 14 working patterns." />
+<meta name="twitter:image" content="https://static.wixstatic.com/media/dca658_1965f681d4384dae81c14012889cbf2a~mv2.png/v1/fill/w_1200,h_630,al_c/dca658_1965f681d4384dae81c14012889cbf2a~mv2.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
@@ -76,7 +89,8 @@
     padding:7px 16px;border-radius:200px;margin-bottom:24px}
   .hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;letter-spacing:-1px;max-width:15ch}
   .hero h1 em{font-style:normal;color:var(--teal)}
-  .hero .lede{font-size:clamp(19px,2.4vw,23px);max-width:64ch;margin-top:24px;color:var(--ink)}
+  .hero .hero-sub{font-family:'Montserrat';font-weight:600;font-size:clamp(17px,2vw,21px);color:var(--brown-deep);margin-top:16px;max-width:52ch}
+  .hero .lede{font-size:clamp(18px,2.3vw,22px);max-width:66ch;margin-top:18px;color:var(--ink)}
   .hero .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:16px 22px;box-shadow:var(--shadow)}
@@ -89,6 +103,20 @@
   .band .kicker{font-family:'Montserrat';font-weight:700;letter-spacing:2px;text-transform:uppercase;
     color:var(--brown);font-size:12.5px;margin-bottom:10px}
   .band p{max-width:66ch;color:var(--ink);margin-top:10px}
+
+  /* Browse-by-need jump nav */
+  .needs{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
+  .needs a{font-family:'Montserrat';font-weight:700;font-size:13px;letter-spacing:.3px;color:var(--brown-deep);
+    background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:200px;
+    box-shadow:var(--shadow);transition:transform .15s ease,color .2s ease,border-color .2s ease}
+  .needs a:hover{color:var(--teal);border-color:rgba(46,110,106,.4);transform:translateY(-1px)}
+
+  /* FAQ */
+  .faq{padding:8px 0 4px}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 26px;margin-top:14px;box-shadow:var(--shadow)}
+  .faq-item h3{font-family:'Montserrat';font-weight:700;font-size:19px;color:var(--brown-deep);margin:0 0 8px}
+  .faq-item p{margin:0;color:var(--ink)}
 
   /* Cards */
   .grid{display:grid;gap:26px;padding:18px 0 10px}
@@ -149,6 +177,76 @@
     .nav-right .lnk{display:none}
   }
 </style>
+
+<!-- Schema.org: Organization -->
+<!-- TODO (Juli): add real social profile URLs into "sameAs" below (LinkedIn / Instagram / YouTube / Facebook) for stronger entity signals -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.coconutbreezemedia.com/#organization",
+  "name": "Coconut Breeze Media",
+  "url": "https://www.coconutbreezemedia.com",
+  "logo": "https://static.wixstatic.com/media/dca658_4e78238af8f04dcc97783ec8ec40fa94~mv2.png",
+  "email": "contact@coconutbreezemedia.com",
+  "description": "Digital operations and automation agency building custom AI agents and workflow automations for hospitality, travel, and lifestyle brands.",
+  "areaServed": "Worldwide",
+  "knowsAbout": ["AI agents", "workflow automation", "hospitality technology", "travel marketing automation", "sales automation", "influencer vetting"]
+}
+</script>
+
+<!-- Schema.org: CollectionPage + BreadcrumbList + ItemList of the 14 agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://agents.coconutbreezemedia.com/#webpage",
+      "url": "https://agents.coconutbreezemedia.com/",
+      "name": "AI Agents for Hospitality & Travel | Coconut Breeze Media",
+      "description": "A library of custom AI agents and automations Coconut Breeze Media builds for hospitality, travel, and lifestyle brands — lead capture, influencer vetting, content engines, bookings, and more.",
+      "inLanguage": "en",
+      "isPartOf": { "@type": "WebSite", "@id": "https://www.coconutbreezemedia.com/#website", "url": "https://www.coconutbreezemedia.com", "name": "Coconut Breeze Media" },
+      "publisher": { "@id": "https://www.coconutbreezemedia.com/#organization" },
+      "breadcrumb": { "@id": "https://agents.coconutbreezemedia.com/#breadcrumb" },
+      "mainEntity": { "@id": "https://agents.coconutbreezemedia.com/#agent-list" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://agents.coconutbreezemedia.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Coconut Breeze Media", "item": "https://www.coconutbreezemedia.com" },
+        { "@type": "ListItem", "position": 2, "name": "AI Agent Library", "item": "https://agents.coconutbreezemedia.com/" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://agents.coconutbreezemedia.com/#agent-list",
+      "name": "AI Agents for Hospitality and Travel",
+      "description": "14 custom AI agent and automation patterns built for hotels, DMOs, tour operators, resorts, and travel brands by Coconut Breeze Media.",
+      "numberOfItems": 14,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-01", "name": "AI Partnership Sales Agent", "description": "Finds high-fit partners, verifies their data in real time, and drafts personalized outreach for hospitality sales teams.", "category": "Sales Automation", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hotels, DMOs and Operators" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-01" } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-02", "name": "Trade-Show Lead Capture", "description": "Turns a photo of a business card into a verified, enriched CRM contact with a follow-up drafted — built for hospitality sales teams at travel trade shows.", "category": "Lead Capture", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hospitality Sales Teams" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-02" } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-03", "name": "Influencer & Creator Vetting", "description": "Sources travel and lifestyle creators at scale and scores each against your standards, so you partner with the ones who convert.", "category": "Influencer Marketing", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Travel and Lifestyle Brands" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-03" } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-04", "name": "Travel Content Engine", "description": "Turns a destination reel, TikTok, or YouTube clip into a publish-ready article and a creator script — original and on-brand.", "category": "Content Operations", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Travel Media and Destinations" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-04" } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-05", "name": "Applicant Screening Agent", "description": "Researches every applicant across the open web, scores them against your criteria, and approves or denies with cited evidence — built for high-volume hospitality hiring.", "category": "Hiring and Screening", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hotels, Restaurants and Operators" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-05" } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-06", "name": "Destination Trend Radar", "description": "Reads your feeds and news sources, ranks the trends gaining momentum, and delivers a daily briefing for travel brands and DMOs.", "category": "Trend Intelligence", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Travel Brands and DMOs" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-06" } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-07", "name": "Community-to-Content Engine", "description": "Reads what your members are talking about, surfaces the themes gaining heat, and turns them into a ready-to-go social calendar.", "category": "Social Intelligence", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Travel Communities and Member Clubs" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-07" } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-08", "name": "Pre-Meeting Briefing Agent", "description": "Text a name before a meeting and get back a verified contact and a plain-language briefing in seconds — built for hospitality partnerships.", "category": "Sales Intelligence", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hospitality Partnerships" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-08" } },
+        { "@type": "ListItem", "position": 9, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-09", "name": "Partner Matchmaking Platform", "description": "Connects the right partners across a travel network through a governed, feedback-driven system that captures every interaction.", "category": "Marketplace and Matchmaking", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Travel Networks and Associations" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-09" } },
+        { "@type": "ListItem", "position": 10, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-10", "name": "Outbound Sequencing Engine", "description": "Codifies what your best account managers do into a multi-touch sequence that never drops a follow-up — for hotel and venue sales teams.", "category": "Sales Sequencing", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hotel and Venue Sales Teams" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-10" } },
+        { "@type": "ListItem", "position": 11, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-11", "name": "Experience Booking & Payments", "description": "Guests book and pay in one branded flow with automatic confirmations and reminders — built for tours, experiences, and venues.", "category": "Bookings and Payments", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Tours, Experiences and Venues" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-11" } },
+        { "@type": "ListItem", "position": 12, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-12", "name": "Contract & Document Intelligence", "description": "Reads group contracts, leases, and vendor agreements, extracts key dates, and flags every renewal before it becomes urgent — for hotel groups and property managers.", "category": "Document Intelligence", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Hotel Groups and Property Managers" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-12" } },
+        { "@type": "ListItem", "position": 13, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-13", "name": "Team Capacity Scheduler", "description": "Assigns work across the sprint by who actually has room, with overload flags and auto-rebalancing — for marketing and ops teams.", "category": "Operations", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Marketing and Ops Teams" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-13" } },
+        { "@type": "ListItem", "position": 14, "item": { "@type": "Service", "@id": "https://agents.coconutbreezemedia.com/#agent-14", "name": "Internal Delegation Agent", "description": "Coconut Breeze Media's in-house AI operations assistant that builds databases, automations, and documents on command within a tightly scoped permission set.", "category": "Internal Operations", "serviceType": "AI Automation", "audience": { "@type": "Audience", "audienceType": "Coconut Breeze Media" }, "provider": { "@id": "https://www.coconutbreezemedia.com/#organization" }, "url": "https://agents.coconutbreezemedia.com/#agent-14" } }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -167,7 +265,8 @@
   <div class="wrap">
     <span class="eyebrow">AI Agents · Hospitality · Travel · Lifestyle</span>
     <h1>Agents that could be <em>yours</em>.</h1>
-    <p class="lede">Coconut Breeze Media builds custom AI agents and automations for hospitality, travel, and lifestyle brands — capturing leads on the show floor, vetting partners and creators, turning content around overnight, taking bookings, and running the operations behind the guest experience. Here's a library of what we build.</p>
+    <p class="hero-sub">Custom AI agents and workflow automation, built for hospitality, travel &amp; lifestyle teams.</p>
+    <p class="lede">Coconut Breeze Media builds custom AI agents and automations for hotels, DMOs, tour operators, resorts, travel media, and lifestyle brands — capturing leads at trade shows like FITUR and IMEX, automating partnership outreach, vetting influencers, turning destination video into published content overnight, taking bookings, and tracking contract renewals. This page documents 14 working agent patterns — each with the problem it solves, how it works, and the result it produces.</p>
     <div class="meta">
       <div class="stat"><b>14</b><span>Agents in the library</span></div>
       <div class="stat"><b>Hospitality</b><span>Built for the niche</span></div>
@@ -180,15 +279,24 @@
 <div class="band">
   <div class="wrap">
     <div class="kicker">The Agent Library</div>
-    <h2>Systems that think, decide, and act</h2>
+    <h2>Hospitality AI agents that think, decide, and act</h2>
     <p>Each one is a real, working pattern — built for hospitality, travel, and lifestyle teams. Browse the library, then book a live walkthrough of the one that fits your property, brand, or portfolio.</p>
+    <nav class="needs" aria-label="Browse agents by need">
+      <a href="#agent-01">Sales &amp; outreach</a>
+      <a href="#agent-02">Trade-show lead capture</a>
+      <a href="#agent-03">Influencer marketing</a>
+      <a href="#agent-04">Content &amp; social</a>
+      <a href="#agent-11">Bookings &amp; payments</a>
+      <a href="#agent-12">Document intelligence</a>
+      <a href="#agent-13">Operations</a>
+    </nav>
   </div>
 </div>
 
 <div class="wrap"><div class="grid">
 
   <!-- 01 — AI Partnership Sales Agent -->
-  <article class="case">
+  <article class="case" id="agent-01">
     <div class="num">01</div>
     <div class="cat">Sales Automation · Hotels, DMOs &amp; Operators</div>
     <h3>AI Partnership Sales Agent</h3>
@@ -209,7 +317,7 @@
   </article>
 
   <!-- 02 — Trade-Show Lead Capture -->
-  <article class="case">
+  <article class="case" id="agent-02">
     <div class="num">02</div>
     <div class="cat">Lead Capture · Hospitality Sales Teams</div>
     <h3>Trade-Show Lead Capture</h3>
@@ -230,7 +338,7 @@
   </article>
 
   <!-- 03 — Influencer & Creator Vetting -->
-  <article class="case">
+  <article class="case" id="agent-03">
     <div class="num">03</div>
     <div class="cat">Influencer Marketing · Travel &amp; Lifestyle Brands</div>
     <h3>Influencer &amp; Creator Vetting</h3>
@@ -251,7 +359,7 @@
   </article>
 
   <!-- 04 — Travel Content Engine -->
-  <article class="case">
+  <article class="case" id="agent-04">
     <div class="num">04</div>
     <div class="cat">Content Operations · Travel Media &amp; Destinations</div>
     <h3>Travel Content Engine</h3>
@@ -272,7 +380,7 @@
   </article>
 
   <!-- 05 — Applicant Screening -->
-  <article class="case">
+  <article class="case" id="agent-05">
     <div class="num">05</div>
     <div class="cat">Hiring &amp; Screening · Hotels, Restaurants &amp; Operators</div>
     <h3>Applicant Screening Agent</h3>
@@ -293,7 +401,7 @@
   </article>
 
   <!-- 06 — Destination Trend Radar -->
-  <article class="case">
+  <article class="case" id="agent-06">
     <div class="num">06</div>
     <div class="cat">Trend Intelligence · Travel Brands &amp; DMOs</div>
     <h3>Destination Trend Radar</h3>
@@ -314,7 +422,7 @@
   </article>
 
   <!-- 07 — Community-to-Content Engine -->
-  <article class="case">
+  <article class="case" id="agent-07">
     <div class="num">07</div>
     <div class="cat">Social Intelligence · Travel Communities &amp; Member Clubs</div>
     <h3>Community-to-Content Engine</h3>
@@ -335,7 +443,7 @@
   </article>
 
   <!-- 08 — Pre-Meeting Briefing Agent -->
-  <article class="case">
+  <article class="case" id="agent-08">
     <div class="num">08</div>
     <div class="cat">Sales Intelligence · Hospitality Partnerships</div>
     <h3>Pre-Meeting Briefing Agent</h3>
@@ -356,7 +464,7 @@
   </article>
 
   <!-- 09 — Partner Matchmaking Platform -->
-  <article class="case">
+  <article class="case" id="agent-09">
     <div class="num">09</div>
     <div class="cat">Marketplace &amp; Matchmaking · Travel Networks &amp; Associations</div>
     <h3>Partner Matchmaking Platform</h3>
@@ -377,7 +485,7 @@
   </article>
 
   <!-- 10 — Outbound Sequencing Engine -->
-  <article class="case">
+  <article class="case" id="agent-10">
     <div class="num">10</div>
     <div class="cat">Sales Sequencing · Hotel &amp; Venue Sales Teams</div>
     <h3>Outbound Sequencing Engine</h3>
@@ -398,7 +506,7 @@
   </article>
 
   <!-- 11 — Experience Booking & Payments -->
-  <article class="case">
+  <article class="case" id="agent-11">
     <div class="num">11</div>
     <div class="cat">Bookings &amp; Payments · Tours, Experiences &amp; Venues</div>
     <h3>Experience Booking &amp; Payments</h3>
@@ -419,7 +527,7 @@
   </article>
 
   <!-- 12 — Contract & Document Intelligence -->
-  <article class="case">
+  <article class="case" id="agent-12">
     <div class="num">12</div>
     <div class="cat">Document Intelligence · Hotel Groups &amp; Property Managers</div>
     <h3>Contract &amp; Document Intelligence</h3>
@@ -440,7 +548,7 @@
   </article>
 
   <!-- 13 — Team Capacity Scheduler -->
-  <article class="case">
+  <article class="case" id="agent-13">
     <div class="num">13</div>
     <div class="cat">Operations · Marketing &amp; Ops Teams</div>
     <h3>Team Capacity Scheduler</h3>
@@ -461,7 +569,7 @@
   </article>
 
   <!-- 14 — Internal Delegation Agent -->
-  <article class="case">
+  <article class="case" id="agent-14">
     <div class="num">14</div>
     <div class="cat">Internal Operations · Coconut Breeze Media</div>
     <h3>Our Own Delegation Agent</h3>
@@ -481,6 +589,32 @@
     <a class="card-cta" href="https://www.coconutbreezemedia.com/contact">Book a demo →</a>
   </article>
 
+</div></div>
+
+<!-- FAQ -->
+<div class="band">
+  <div class="wrap">
+    <div class="kicker">Questions</div>
+    <h2>AI agents for hospitality &amp; travel, explained</h2>
+  </div>
+</div>
+<div class="wrap"><div class="faq">
+  <div class="faq-item">
+    <h3>What is an AI agent for hospitality?</h3>
+    <p>An AI agent for hospitality is a custom automation that handles a specific operational job — like capturing leads, vetting influencers, drafting outreach, or tracking contract renewals — with built-in judgment, so a hotel, DMO, or travel brand's team spends less time on repetitive work. Coconut Breeze Media builds these as working systems wired into the tools you already use (Airtable, HubSpot, Stripe, Brevo, n8n, and more), not as templates or chatbots.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Which hospitality and travel teams use these agents?</h3>
+    <p>Hotels and resorts, destination marketing organizations (DMOs), tour and experience operators, travel media and publishers, travel management companies, member clubs, and lifestyle brands. The 14 agents in this library map to sales, marketing, content, hiring, bookings, and operations roles across those organizations.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How long does it take to build and deploy a custom AI agent?</h3>
+    <p>Most single-purpose agents go from kickoff to a working build in a few weeks, because they're assembled on production-grade tools rather than coded from scratch. We start with the one workflow that's costing your team the most time, ship it, then expand. Book a demo and we'll scope a realistic timeline for your use case.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do these agents replace my team?</h3>
+    <p>No — they remove the repetitive, judgment-light work so your team can focus on guests, partners, and revenue. Every agent is designed with human-in-the-loop control: approval gates, send caps, and escalation rules keep a person at the wheel for anything that matters.</p>
+  </div>
 </div></div>
 
 <!-- CTA -->
